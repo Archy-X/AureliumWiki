@@ -1,6 +1,5 @@
 ---
 description: Welcome to the AuraSkills wiki!
-layout: landing
 ---
 
 # AuraSkills
@@ -26,4 +25,14 @@ The 15 skills are Farming, Foraging, Mining, Fishing, Excavation, Archery, Defen
 Skills can be viewed using `/skills` or by using the command for an individual skill, such as `/farming`, `/mining`, etc.
 
 The `skills.yml` file is where skills are configured, including enabling/disabling skills, changing max levels and other skill-related options, as well as which abilities and mana abilities they have.
+
+## Configuration
+
+There a multiple configuration files in the `plugins/AuraSkills` directory that are used to configure the plugin.
+
+### Main Config
+
+> Main article: [Main Config](main-config.md)
+
+The main `config.yml` file is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
 
