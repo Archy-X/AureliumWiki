@@ -113,11 +113,11 @@ Skill levels can be manipulated using the following commands:
 * `/skills skill setall <player> <skill> <level>`
 * `/skills skill reset <player> [skill]`
 
-### Menu
+## Menu
 
 The skills menu is accessed using `/skills`. The design and format of the menu is configured in `menus/skills.yml`.
 
-### Messages
+## Messages
 
 The display names and descriptions of skills can be changed under the `skills` section of the messages file.
 
