@@ -11,7 +11,7 @@ Upon reaching a new skill level, players are rewarded with some of the following
 * Stat levels
 * Ability unlocks and level-ups
 * Mana Ability unlocks and level-ups
-* Other customizable rewards, which can include:
+* Other customizable [rewards](rewards.md), which can include:
   * Commands
   * Permissions
   * Items
