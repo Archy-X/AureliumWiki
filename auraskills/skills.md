@@ -4,7 +4,7 @@ description: Guide to skills and the skills.yml file
 
 # Skills
 
-**Skills** are measures of a player's experience or progress in different aspects of the game. As the main feature of AuraSkills, all other features are connected or related to skills. Each skill has a set of sources: specific tasks or actions used to gain XP in that skill. Players level up by reaching the XP requirement for the next level, which increases with higher skill levels.
+**Skills** are measures of a player's experience or progress in different aspects of the game. As the main feature of AuraSkills, all other features are connected or related to skills. All information about skills is viewed in the skills menu using `/skills`. Each skill has a set of sources: specific tasks or actions used to gain XP in that skill. Players level up by reaching the XP requirement for the next level, which increases with higher skill levels.
 
 Upon reaching a new skill level, players are rewarded with some of the following:
 
@@ -61,13 +61,9 @@ auraskills/farming: # The Namespaced ID of the skill
 
 The `abilities` key is a list of the abilities attached to the skill (will level up as the skill levels up). The ability name must be a full Namespaced ID. All other configuration for abilities is done in `abilities.yml`.
 
-> See also: Abilities
-
 ### Mana Ability
 
 The `mana_ability` key is the name (full Namespaced ID) of the mana ability of the skill. This is an optional value, as not all skills have mana abilities. All other configuration for mana abilities is done in `mana_abilities.yml`.
-
-> See also: Mana Abilities
 
 ### Options
 
@@ -106,3 +102,22 @@ The `mana_ability` key is the name (full Namespaced ID) of the mana ability of t
 #### Forging Options
 
 * `blocked_grindstone_enchants` - A list of enchants to not give XP for when disenchanting an item in a grindstone. Names of unremovable enchants (curses) from custom enchant plugins should be added here.
+
+## Commands
+
+The names of skills can be used to directly open the level progression menus for that skill, such as `/farming`, `/archery`, etc. This can be disabled by setting `enable_skill_commands` to false in `config.yml`.
+
+Skill levels can be manipulated using the following commands:
+
+* `/skills skill setlevel <player> <skill> <level>`
+* `/skills skill setall <player> <skill> <level>`
+* `/skills skill reset <player> [skill]`
+
+### Menu
+
+The skills menu is accessed using `/skills`. The design and format of the menu is configured in `menus/skills.yml`.
+
+### Messages
+
+The display names and descriptions of skills can be changed under the `skills` section of the messages file.
+

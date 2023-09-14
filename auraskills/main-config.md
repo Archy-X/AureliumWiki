@@ -6,7 +6,7 @@ description: Guide to the config.yml file
 
 The `config.yml` is the main plugin configuration file found in the `plugins/AureliumSkills` folder. It is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
 
-Options for each skill and stat were formerly here, but have been moved to their own `skills.yml` and `stats.yml` files.&#x20;
+Options for each [skill](skills.md) and stat were formerly here, but have been moved to their own `skills.yml` and `stats.yml` files.&#x20;
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
