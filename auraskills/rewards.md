@@ -10,9 +10,9 @@ Rewards are a powerful way of performing actions or giving things when a player 
 
 ### Yaml Syntax
 
-Configuring rewards requires Yaml syntax that you might not have seen before, technically known as map lists. These are simply lists comprised of multiple line components, similar to an array of objects in JSON. Map lists are defined like this:
+Configuring rewards requires Yaml syntax that you might not have seen before, technically known as map lists. These are basically an array of objects in JSON. Map lists are defined like this:
 
-```
+```yaml
 patterns:
   - type: stat # Start of first object in list
     stat: strength
@@ -23,12 +23,12 @@ patterns:
 ```
 
 {% hint style="warning" %}
-Pay attention to the spacing between the hyphen and the previous section. In the example, a regular indentation is 2 spaces. Therefore, the space from the start of your map list values (type, stat, value) compared to the previous section name (patterns) should be 4 spaces.
+Pay attention to the spacing above. The indent level of the keys (type, stat, value) should be aligned exactly as shown! If you have a loading error, it's probably a spacing/indentation issue.
 {% endhint %}
 
 ## File Structure
 
-Rewards are configurable in files in the `AureliumSkils/rewards` folder, and the name of the file corresponds to the skill it configures (eg. farming.yml controls Farming rewards only). There is also the `global.yml` file which configures rewards for all skills, so rewards added in it will be applied to all skills. You will already see files for each skill containing the default rewards. Each file is split into two main sections, `patterns` and `levels`.
+Rewards are configurable in files in the `rewards` folder, and the name of the file corresponds to the skill it configures (eg. farming.yml controls Farming rewards only). The`global.yml` file configures rewards for all skills, so rewards added in it will be applied to all skills. You will already see files for each skill containing the default rewards. Each file is split into two main sections, `patterns` and `levels`.
 
 ### Patterns Section
 
@@ -38,13 +38,25 @@ The `start` value is the skill level the reward should first appear at; this sho
 
 The `interval` is the difference between consecutive rewards; an interval of 2 means the reward appears every other level (2, 4, 6,...). The default `interval` is 1.
 
-The `stop` number is the maximum level the reward should appear at, which may or may not be a level the reward would actually be at calculated by the `start` and `interval`. It simply means that there will only be that reward below or at the specified `stop` level. This defaults to the max skill level defined by the `max-level` option of that skill in config.yml.
+The `stop` number is the maximum level the reward should appear at, so there will only be that reward below or at the specified `stop` level. This defaults to the `max-level` option of that skill in `skills.yml`.
+
+Example pattern reward for a command that executes every level up:
+
+```yaml
+patterns:
+  - type: command
+    executor: console
+    commmand: 'say this executes every level up'
+    pattern:
+      start: 2
+      interval: 1
+```
 
 ### Levels section
 
 The levels section is for defining single rewards at a specific level. You must first define a section of the level you want to define for, like so:
 
-```
+```yaml
 levels:
   5:
     - type: command
@@ -69,7 +81,7 @@ Keys:
 
 Example:
 
-```
+```yaml
 - type: stat
   stat: strength
   value: 1
@@ -98,7 +110,7 @@ Keys:
 
 Example:
 
-```
+```yaml
 - type: command
   executor: console
   command: say leveled up!
@@ -108,7 +120,10 @@ Example:
 
 ### Permission Rewards (`permission`)
 
-Permission rewards grant a permission node to a player. You should use this over a command reward because permission rewards automatically handle much of the pain and problems a direct command would have, such as: 1. Automatically removing the permission when the player loses the level 2. Automatically giving missing permissions if you added the reward to a level below what a player already has (applies on player join)
+Permission rewards grant a permission node to a player. Permission rewards are better than using command rewards to add permissions because:&#x20;
+
+1. Permissions are automatically removed when the player loses the level&#x20;
+2. Missing permissions are automatically granted if you added the reward to a level below what a player already has (applies on player join)
 
 Permission rewards currently only work if you use [LuckPerms](https://www.spigotmc.org/resources/luckperms.28140) as your permissions plugin.
 
@@ -119,7 +134,7 @@ Keys:
 
 Example:
 
-```
+```yaml
 - type: permission
   permission: some.permission.node
   value: true
@@ -136,7 +151,7 @@ Keys:
 
 Example:
 
-```
+```yaml
 - type: item
   key: some_item_key
   amount: 24
@@ -152,14 +167,14 @@ Keys:
 
 Example:
 
-```
+```yaml
 - type: money
   amount: 1000
 ```
 
 If you don't use Vault or have special currencies, you can still give money using command rewards. You can also make complex amount equations easily through pattern command rewards combined with the {level} placeholder and PlaceholderAPI math placeholders. Here is an example:
 
-```
+```yaml
 - type: command
   executor: console
   command: eco give {player} %math_{level}*2+100%
@@ -175,7 +190,7 @@ Note: Messages do not include new lines by default, you must use \n at the begin
 
 Example of a menu and chat message being defined:
 
-```
+```yaml
 - type: permission
   permission: some.permission.node
   value: true 
@@ -185,7 +200,7 @@ Example of a menu and chat message being defined:
 
 Example using the message shorthand for both menu and chat messages:
 
-```
+```yaml
 - type: command
   executor: console
   command: say leveled up!
