@@ -4,3 +4,4 @@
 * [Main Config](main-config.md)
 * [Skills](skills.md)
 * [Rewards](rewards.md)
+* [Loot](loot.md)
