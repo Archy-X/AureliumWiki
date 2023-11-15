@@ -5,3 +5,4 @@
 * [Skills](skills.md)
 * [Rewards](rewards.md)
 * [Loot](loot.md)
+* [Menus](menus.md)

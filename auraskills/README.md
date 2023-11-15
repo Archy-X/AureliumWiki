@@ -4,9 +4,9 @@ description: Welcome to the AuraSkills wiki!
 
 # AuraSkills
 
-**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills.md), stats, abilities, and other RPG-related features. It was developed for the Spigot and Paper server platforms and can be downloaded for free on SpigotMC, Hangar, Modrinth, and Polymart. The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
+**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills.md), stats, abilities, and other RPG-related features. Developed for the Spigot and Paper server platforms, the plugin can be downloaded for free on [SpigotMC](https://www.spigotmc.org/resources/81069/), [Hangar](https://hangar.papermc.io/Archy/AureliumSkills), [Modrinth](https://modrinth.com/plugin/aureliumskills), and [Polymart](https://polymart.org/resource/aurelium-skills.738). The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
 
-This wiki contains documentation on how to set up, configure, and use the plugin. Support from the developer is provided on the Discord server, where users can also give suggestions, report bugs, and get announcements. AuraSkills is open-sourced on GitHub.
+This wiki contains documentation on how to set up, configure, and use the plugin. Support from the developer is provided on the [Discord](https://wiki.aurelium.dev/skills/) server, where users can also give suggestions, report bugs, and get announcements. AuraSkills is open-sourced on [GitHub](https://github.com/Archy-X/AureliumSkills).
 
 {% hint style="warning" %}
 This wiki is for AuraSkills 2.0+ only. For the old wiki (AureliumSkills Beta 1.3.x), click [here](http://127.0.0.1:5000/o/-Mf1Cqap-T455k8cLLbf/s/-Mf1ApP15HhRtnWXpe0T/).
@@ -14,7 +14,7 @@ This wiki is for AuraSkills 2.0+ only. For the old wiki (AureliumSkills Beta 1.3
 
 ## Overview
 
-Players level up [skills](skills.md) by gaining skill XP through general Minecraft tasks, such as Farming, Mining, Fighting, or Enchanting. Increasing levels for each skill gives the player stat buffs, unlocks and levels up passive and mana abilities, and other customizable [rewards](rewards.md). Using `/skills`, players can view all the relevant information about skills and gameplay in fully-configurable inventory GUI menus. Certain Fishing and Excavation abilities drop custom loot, which can be customized and extended to other skills through [loot tables](loot.md). Players can compete with each other through leaderboards and rankings. Custom items can also be created that give stat modifiers when held or worn, skill requirements to use, and XP multipliers. Numerous commands and permissions allow server admins to manage players and control access to features.
+Players level up [skills](skills.md) by gaining skill XP through general Minecraft tasks, such as Farming, Mining, Fighting, or Enchanting. Increasing levels for each skill gives the player stat buffs, unlocks and levels up passive and mana abilities, and other customizable [rewards](rewards.md). Using `/skills`, players can view all the relevant information about skills and gameplay in fully-configurable inventory GUI [menus](menus.md). Certain Fishing and Excavation abilities drop custom loot, which can be customized and extended to other skills through [loot tables](loot.md). Players can compete with each other through leaderboards and rankings. Custom items can also be created that give stat modifiers when held or worn, skill requirements to use, and XP multipliers. Numerous commands and permissions allow server admins to manage players and control access to features.
 
 ## Skills
 
@@ -38,3 +38,36 @@ There a multiple configuration files in the `plugins/AuraSkills` directory that 
 
 The main `config.yml` file is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
 
+### Skills
+
+> Main article: [Skills#Configuration](https://github.com/Archy-X/AureliumSkills)
+
+The `skills.yml` file is used to configure skills, including:
+
+* Disabling/enabling skills
+* Changing the max level of skills
+* Removing or switching the abilities of skills
+* Removing or switching the mana ability of skills
+* Other skill-related config options
+
+### Rewards
+
+> Main article: [Rewards](rewards.md)
+
+The `rewards/` folder contains the rewards files for each skill. The name of the file is the name of the skill it corresponds to. Rewards are given when a player levels up a skill and can be used to level stats, execute commands, grant permissions, give items, or deposite money (Vault). The `global.yml` is used to add rewards that apply to all skills (not a combined level, just saves time from adding same rewards to each file).
+
+{% hint style="info" %}
+Removing or changing the default stats granted by a skill are done in the [rewards](rewards.md) file.
+{% endhint %}
+
+### Loot
+
+> Main article: [Loot](loot.md)
+
+The `loot/` folder contains loot tables for certain skills. By default, Fishing and Excavation include loot tables that are dropped by certain abilities in those skills. Custom loot tables can be added for Mining or Foraging by creating a file of the skill name (mining.yml or foraging.yml).
+
+### Menus
+
+> Main article: [Menus](menus.md)
+
+The `menus/` folder contains the menu files used to change the appearance of the plugin's GUI menus such as `/skills`. Almost anything related to a menu's appearance can be customized, including adding new items or adding actions to execute when clicking an item.
