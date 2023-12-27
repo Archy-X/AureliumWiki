@@ -7,3 +7,5 @@
 * [Loot](loot.md)
 * [Menus](menus.md)
 * [Migration](migration.md)
+* [Commands](commands.md)
+* [Permissions](permissions.md)
