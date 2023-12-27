@@ -6,3 +6,4 @@
 * [Rewards](rewards.md)
 * [Loot](loot.md)
 * [Menus](menus.md)
+* [Migration](migration.md)
