@@ -31,8 +31,8 @@ If you are planning on starting a new season/world/server, you do not need to mi
 
 * Messages (significant format changes)
 * Menus (significant format changes)
-* Permission nodes set in a permissions plugin like LuckPerms (all permission nodes have been renamed)
 * PlaceholderAPI placeholders for %aureliumskills\_...% will still work for now, but you should change them to %auraskills\_...% eventually
+* Custom XP sources added in the custom section of the old sources\_config.yml
 
 ## What will migrate automatically
 
