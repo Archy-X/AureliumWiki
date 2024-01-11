@@ -8,7 +8,7 @@ description: Guide to creating to custom rewards
 
 Rewards are a powerful way of performing actions or giving things when a player levels skills. There are many different types of rewards, including stats, commands, permissions, items, and money. Rewards also support custom messages in menus and level-up chat messages.
 
-### Yaml Syntax
+### Yaml syntax
 
 Configuring rewards requires Yaml syntax that you might not have seen before, technically known as map lists. These are basically an array of objects in JSON. Map lists are defined like this:
 
@@ -26,11 +26,11 @@ patterns:
 Pay attention to the spacing above. The indent level of the keys (type, stat, value) should be aligned exactly as shown! If you have a loading error, it's probably a spacing/indentation issue.
 {% endhint %}
 
-## File Structure
+## File structure
 
 Rewards are configurable in files in the `rewards` folder, and the name of the file corresponds to the skill it configures (eg. farming.yml controls Farming rewards only). The`global.yml` file configures rewards for all skills, so rewards added in it will be applied to all skills. You will already see files for each skill containing the default rewards. Each file is split into two main sections, `patterns` and `levels`.
 
-### Patterns Section
+### Patterns section
 
 The patterns section is for rewards that repeat in a regular pattern within a skill's progression. Each reward in this section should have a `pattern` section that can define a `start`, `interval`, and `stop`. Patterns can be used for every type of reward.
 
@@ -66,11 +66,11 @@ levels:
 
 This command reward will be executed when the player levels up to skill level 5.
 
-## Reward Types
+## Reward types
 
 Every reward must have a `type` value of the reward type it is. Each type of reward has different keys you can define that configure the reward, both required and optional.
 
-### Stat Rewards (`stat`)
+### Stat rewards (`stat`)
 
 Stat rewards level up an Aurelium Skills stat, which includes health, regeneration, strength, luck, wisdom, and toughness. Menu and level-up chat messages are automatically handled.
 
@@ -91,7 +91,7 @@ Example:
 **Want to remove the default stat rewards?** You can do so by making the patterns section empty using `patterns: []`. However, you may need to adjust menu message newlines in the messages file to remove extra spaces when there are no stat rewards.
 {% endhint %}
 
-### Command Rewards (`command`)
+### Command rewards (`command`)
 
 Command rewards allow you to execute any command, either through console or the player.
 
@@ -118,11 +118,11 @@ Example:
   revert_command: say removed level up
 ```
 
-### Permission Rewards (`permission`)
+### Permission rewards (`permission`)
 
-Permission rewards grant a permission node to a player. Permission rewards are better than using command rewards to add permissions because:&#x20;
+Permission rewards grant a permission node to a player. Permission rewards are better than using command rewards to add permissions because:
 
-1. Permissions are automatically removed when the player loses the level&#x20;
+1. Permissions are automatically removed when the player loses the level
 2. Missing permissions are automatically granted if you added the reward to a level below what a player already has (applies on player join)
 
 Permission rewards currently only work if you use [LuckPerms](https://www.spigotmc.org/resources/luckperms.28140) as your permissions plugin.
@@ -140,7 +140,7 @@ Example:
   value: true
 ```
 
-### Item Rewards (`item`)
+### Item rewards (`item`)
 
 Item rewards give an item to the player, supporting any item through a key and registry system. Items must first be registered to a unique key in-game using `/skills item register [key]` and holding the item you want to register in your main hand. Items can be unregistered using `/skills item unregister [key]`. When a player's inventory is full, they will be notified and the item will be added to the player's unclaimed items. They can then claim the items using `/skills claimitems`. Unclaimed items are saved between restarts.
 
@@ -157,7 +157,7 @@ Example:
   amount: 24
 ```
 
-### Money Rewards (`money`)
+### Money rewards (`money`)
 
 Money rewards simply give money on level up through Vault Economy.
 

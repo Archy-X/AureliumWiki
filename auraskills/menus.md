@@ -4,7 +4,7 @@ description: Guide to configuring menus
 
 # Menus
 
-Menus are inventory GUIs that display information about skills to players in-game. The main skills menu is opened with the command `/skills`, with others accessible by clicking buttons in certain menus. The look and style of menus can be configured in the files in the `menus/` folder, while the plain text content is configured through messages.&#x20;
+Menus are inventory GUIs that display information about skills to players in-game. The main skills menu is opened with the command `/skills`, with others accessible by clicking buttons in certain menus. The look and style of menus can be configured in the files in the `menus/` folder, while the plain text content is configured through messages.
 
 {% hint style="info" %}
 The plugin uses the [Slate](https://wiki.aurelium.dev/slate/) library for menus; most of the information on configuring items, templates, and lore can be found there.
@@ -16,7 +16,7 @@ The following is a list of menus in the plugin:
 
 <table><thead><tr><th width="186">Menu</th><th>How to access</th><th>Description</th></tr></thead><tbody><tr><td>skills</td><td><code>/skills</code> command.</td><td>Overview and player progress in all skills.</td></tr><tr><td>stats</td><td><code>/stats</code> command or clicking the stats item (Player Head) in the skills menu.</td><td>Overview and player levels in all stats.</td></tr><tr><td>level_progression</td><td>Clicking a skill item in the skills menu or the command corresponding to the name of the skill (<code>/farming</code>, <code>/mining</code>, etc).</td><td>Shows a track of all levels in a skill and their rewards with player progress. Contains items to access other skill-specific menus.</td></tr><tr><td>sources</td><td>Clicking the sources item (Experience Bottle) in the level_progression menu.</td><td>Shows all the ways to earn XP in a certain skill and their XP value.</td></tr><tr><td>abilities</td><td>Clicking the abilities item (Light Blue Dye) in the level_progression menu.</td><td>Shows the abilities and mana abilities of a skill with the player's ability levels.</td></tr><tr><td>leaderboard</td><td>Clicking the rank item (Paper) in the level_progression menu.</td><td>Shows the top 10 players by level in a skill.</td></tr></tbody></table>
 
-## File Structure
+## File structure
 
 The files for configuring menus are located in the `AuraSkills/menus` folder. Each menu has its own corresponding file used to configure that menu.
 
@@ -71,7 +71,7 @@ The `options` section contains configurable settings that can change menu behavi
 * `use_level_as_amount` - When true, the level templates (unlocked, in\_progress, and locked) will have their item amount set to the level number they represent (at level 30 the item amount willl be 30). Above the max stack size of the item (usually 64), the value of `over_max_stack_amount` is used.
 * `over_max_stack_amount` - The amount to set for level templates above the max stack size when `use_level_amount` is true.
 
-## Colors and Formatting
+## Colors and formatting
 
 The menu files use the [MiniMessage](https://docs.advntr.dev/minimessage/format.html) format by default. Styles are defined using tags with angle brackets (\<tag>) with optional closing tag (\</tag). The old Bukkit method of styling (such as \&a) is also supported if you want to use it, though MiniMessage is preferred due to its greater features.
 
@@ -83,7 +83,6 @@ Hex colors can be defined using `<#00ff00>`. See the [MiniMessage docs](https://
 
 Placeholders are used in the menu configuration to allow the plugin to insert context-dependent messages and data. There are three general types of placeholders that serve different purposes:
 
-* Single curly braces (`{example}`) - Replaced internally by the plugin for variable data such as player levels and XP. They only work within the same item they were originally defined in (or a component attached to the item), so it should not be moved outside the item.&#x20;
+* Single curly braces (`{example}`) - Replaced internally by the plugin for variable data such as player levels and XP. They only work within the same item they were originally defined in (or a component attached to the item), so it should not be moved outside the item.
 * Double curly braces (`{{example}}`) - Message placeholders replaced by the message key defined in the messages file by the key `menus.[menu_name].[placeholder]` where `[menu_name]` is the name of the menu and `[placeholder]` is the text within the double curly braces. If this key doesn't exist, it will look at the key `menus.common.[placeholder]` for the message. The player's set language determines which message file the message will come from, allowing the single menu configuration to work with any language.
 * PlaceholderAPI placeholders (`%example%`) - Placeholders within percent symbols are PlaceholderAPI placeholders. They can either be AuraSkills placeholders or for any other plugin. The PlaceholderAPI plugin must be installed for them to work (and necessary ecloud expansions for other plugins).
-

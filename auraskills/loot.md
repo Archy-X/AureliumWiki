@@ -14,11 +14,11 @@ The drop chances for the abilities are configured separately in `abilities.yml`,
 
 Beyond changing the items dropped for these abilities, the files enable adding custom loot pools unrelated to abilities, executing commands as loot, as well as creating new loot tables for other skills (Foraging and Mining).
 
-## File Structure
+## File structure
 
 Loot tables are separated into files for each skill in the loot folder. The name of the file is the skill that the file corresponds to. By default, there are excavation and fishing loot tables. You can optionally add loot tables for mining and foraging, as long as they follow the format.
 
-## Loot Pools
+## Loot pools
 
 Loot pools are lists of loot entries, and each loot table file can have multiple loot pools. In the default excavation and fishing loot tables, there are the rare and epic loot pools. However, you can add any amount of new loot pools.
 
@@ -34,7 +34,7 @@ Keys:
 
 Each pool has a loot section containing a map list of the loot entries. This uses the same type of syntax as rewards, which is explained [here](rewards.md#yaml-syntax).
 
-## Loot Entries
+## Loot entries
 
 Currently, there are two types of loot: item loot and command loot. Each loot entry must have certain required keys and can optionally have more. Optional keys are either notated with (optional) or have their default values specified on this page. Each key is explained below:
 
@@ -46,14 +46,12 @@ Universal Keys (apply to any loot type):
 * `sources` - A list of sources or source tags that this loot should exclusively apply to. The names of sources should match the exact name in sources\_config.yml. Does not support custom block sources yet (optional).
 * `xp` - The amount of skill xp to give when this loot is dropped (defaults to the original source amount)
 
-### Item Loot
+### Item loot
 
 Item loot keys:
 
 * `material` - The material of the item, must be valid bukkit material name (not case sensitive). Use material:id to specify legacy data if on 1.12
-*   `amount` - Controls the amount of item to give. This can either be a single number like '5' or a range of numbers such as '1-5', which gives a random amount from 1 to 5 (both inclusive) (defaults to 1)
-
-
+* `amount` - Controls the amount of item to give. This can either be a single number like '5' or a range of numbers such as '1-5', which gives a random amount from 1 to 5 (both inclusive) (defaults to 1)
 * `key` - References an item key registered using /skills item register. If this is specified, material and all keys below do not apply
 * `display_name` - The display name of the item, supports & for color codes unless escaped with \\& (optional)
 * `lore` - The lore of the item, must be a list of each line, supports & for color codes unless escaped with \\& (optional)
@@ -134,7 +132,7 @@ An item with hidden enchants using item flags and custom model data using the nb
     - hide_enchants
 ```
 
-### Command Loot
+### Command loot
 
 Command loot is used to execute any command when the player gets the loot, either through console or by the player.
 
@@ -152,7 +150,7 @@ Example:
   command: say hi
 ```
 
-## Loot Selection
+## Loot selection
 
 The way loot is selected is fairly straightforward:
 
