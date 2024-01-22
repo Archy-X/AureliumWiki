@@ -81,7 +81,7 @@ The block source (`type: block`) gives XP for breaking or interacting with block
 
 * `block` - The block type/material. This must be a valid Bukkit [Material](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html) in all lowercase. (Required)
 * `blocks` - A list of multiple block types used to group multiple blocks to the same source. Overrides `block`.
-* `trigger` - The type of action on the block. Can be either `break` or `interact`. `break` is simply when is block is broken by a player with left click. `interact` is when the block is right clicked. (Required)
+* `trigger` - The type of action on the block. Can be either `break` or `interact`. `break` is simply when a block is broken by a player with left click. `interact` is when the block is right clicked. (Required)
 * `triggers` - A list of multiple triggers.
 * `check_replace` - Whether player-placed blocks should not give XP. If true, placed blocks will not give XP. If false, any block that matches the source will give XP. Defaults to true.
 * `state` - A section of keys that defines the specific block state the block must match.

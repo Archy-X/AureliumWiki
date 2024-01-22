@@ -10,3 +10,4 @@
 * [Migration](migration.md)
 * [Commands](commands.md)
 * [Permissions](permissions.md)
+* [API](api.md)
