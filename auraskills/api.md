@@ -401,13 +401,28 @@ The first argument, name, is a lowercase name for your source used to construct 
 The second argument accepts an instance of `XpSourceParser` where the type parameter is your `CustomSource` class. You can create a new class, or use a lambda like in this example:
 
 ```java
-registry.registerSourceType("trading", (XpSourceParser<TradingSource>) (source, context) -> {
+SourceType trading = registry.registerSourceType("trading", (XpSourceParser<TradingSource>) (source, context) -> {
     double multiplier = source.node("multiplier").getDouble(1.0);
     return new TradingSource(context.parseValues(source), multiplier);
 }
 ```
 
 The `source` argument of the lambda is a `ConfigurationNode` from [Configurate](https://github.com/SpongePowered/Configurate/wiki/Node) that contains the keys and values from the configuration section of the source to load. The `context` argument is a `SourceContext` that contains useful parsing methods for enforcing required keys or getting pluralized values. You also need to use `context.parseValues(source)` to get the `SourceValues` object to pass as the first argument of your source type constructor. This parses things like the name, xp, and display\_name of the source for you, so you only need to implement parsing of your custom options.
+
+To make your source actually give XP, you need to implement a leveler that listens to the proper Bukkit events or implements some other mechanism for gaining XP. You can create an instance of the `LevelerContext` class to help you create a leveler. It contains useful methods like checking blocked locations and players. To create an instance, you need to pass an instance of the API and the `SourceType` returned when you registered it.
+
+After you register the source type, you still have to create a sources file for your skill to actually define the XP source. In this example, we create a `sources/trading.yml` file:
+
+```yaml
+sources:
+  trade:
+    type: pluginname/trading
+    multiplier: 5
+```
+
+{% hint style="warning" %}
+You are responsible for generating the sources file in the user's folder using `Plugin#saveResource`.
+{% endhint %}
 
 #### Adding rewards
 
