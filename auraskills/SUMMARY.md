@@ -11,3 +11,4 @@
 * [Commands](commands.md)
 * [Permissions](permissions.md)
 * [API](api.md)
+* [Stats](stats.md)

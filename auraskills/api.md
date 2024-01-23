@@ -444,4 +444,67 @@ patterns:
 
 ### Abilities
 
+To add a custom ability, use the `CustomAbility.builder` static method to get an instance of `CustomAbilityBuilder`. This example creates an ability called Magic Archer that gives additional Archery XP when using spectral or tipped arrows. We create a new class to hold static constant references to our abilities for easier access.
+
+```java
+public class CustomAbilities {
+
+    public static final CustomAbility MAGIC_ARCHER = CustomAbility
+            .builder(NamespacedId.of("pluginname", "magic_archer")
+            .displayName("Magic Archer")
+            .description("Gain {value}% more XP when using spectral or tipped arrows.")
+            .info("+{value}% Special Arrow XP ")
+            .baseValue(20) // Value when at level 1
+            .valuePerLevel(10) // Value added per ability level
+            .unlock(6) // Skill level ability unlocks at
+            .levelUp(5) // Skill level interval between ability level ups
+            .maxLevel(0) // 0 = unlimited max level, but capper by the max skill level
+            .build();          
+
+}
+```
+
+Then, register your `CustomAbility` using the `NamespacedRegistry` in your plugin's onEnable.
+
+```java
+AuraSkillsApi auraSkills = AuraSkillsApi.get();
+
+NamespacedRegistry registry = auraSkills.useRegistry("pluginnanme", getDataFolder());
+
+registry.registerAbility(CustomAbilities.MAGIC_ARCHER);
+```
+
+You now need to actually implement your ability's functionality. This will vary depending on the mechanics of your ability, but will typically follow this general flow:
+
+* Listen to some Bukkit event
+* Perform some checks confirming the ability can actually be used. You can create an instance of the`AbilityContext` class and use methods like `isDisabled` and `failsChecks` to return early.
+* [Get the `SkillsUser` object of the player](api.md#interacting-with-players)
+* Get the player's ability value using `Ability#getValue(SkillsUser#getAbilityLevel)`
+* Use the value to modify gameplay mechanics
+
+The implementation of the example ability won't be shown, but it would be done by listening to the `EntityXpGainEvent` and using `setAmount` to change the XP gained.
+
+#### Adding to a skill
+
+For your ability to work, it must be linked to a skill. You can do this by calling the `ability` or `abilities` methods on `CustomSkillBuilder` when building your `CustomSkill`. You can also add it to the `abilities` list of a skill in any `skills.yml` configuration file, including for existing default skills. Make sure to use the full NamespacedId to reference your ability in the config in the format `pluginname/abilityname`.
+
+#### Configuration
+
+The example above hardcoded the values for baseValue, unlock, levelUp, etc. If you want to make these values configurable by the user, create an `abilities.yml` file in your content directory. The format is the same as the AuraSkills file.
+
+```yaml
+abilities:
+  pluginname/magic_archer:
+    enabled: true
+    base_value: 15
+    value_per_level: 10
+    unlock: 6
+    level_up: 5
+    max_level: 0
+```
+
+{% hint style="warning" %}
+You are responsible for generating `abilities.yml` in your user's plugin folder using `Plugin#saveResource`.
+{% endhint %}
+
 ### Mana Abilities
