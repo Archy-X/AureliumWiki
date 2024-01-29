@@ -157,6 +157,15 @@ if (mana >= 10.0) {
 double maxMana = user.getMaxMana();
 ```
 
+An easier way to consume mana for things like activating mana abilities or casting spells is using the `consumeMana` method. This returns true if the user has enough mana and mana was successfully removed, and false if mana could not be removed. It also automatically sends a "Not enough mana" message to the action bar.
+
+```java
+if (user.consumeMana(15.0)) {
+    // You have to send a success message yourself
+    // Implement mana ability functionality here
+}
+```
+
 ## Events
 
 The API has many events to interact with the plugin. These are registered just like regular Bukkit events.
@@ -173,6 +182,17 @@ The following is a list of available events. This may not always be up-to-date, 
 * `SkillLevelUpEvent` - Calls when a player levels up a skill.
 * `XpGainEvent` - Calls when a player gains skill XP.
 * `CustomRegenEvent` - Calls when a player regenerates health if custom regen mechanics are enabled.
+
+## Global Registry
+
+The global registry is used to get any Skill, Stat, Ability, etc instance by its NamespacedId. This allows you to parse content from a name that supports custom content. Use `AuraSkillsApi#getGlobalRegistry` to get the registry. This is a read-only interface, to register your own custom content, see [#custom-content](api.md#custom-content "mention").
+
+```java
+GlobalRegistry registry = auraSkills.getGlobalRegistry();
+
+Skill skill = registry.getSkill(NamespacedId.of("pluginname", "skillname");
+// To get default skills, using the Skills enum is much easier
+```
 
 ## Custom content
 
@@ -508,3 +528,41 @@ You are responsible for generating `abilities.yml` in your user's plugin folder 
 {% endhint %}
 
 ### Mana Abilities
+
+Adding a custom mana ability is similar to creating a normal ability. Use the builder to create a `CustomManaAbility` instance. This example creates a mana ability called Leap for Agility that launches the player forward when right clicking a feather. We create a new class to hold a static constant reference to our mana abillity for easier access.
+
+```java
+public class CustomManaAbilities {
+
+    public static final CustomManaAbility LEAP = CustomManaAbility
+            .builder(NamespacedId.of("pluginname", "leap"))
+            .displayName("Leap")
+            .description("Instantly launch yourself forward [Right click feather to activate]")
+            .build();
+
+}
+```
+
+To define the values for your mana ability like base\_value, value\_per\_level, base\_cooldown, base\_mana\_cost, etc., you can either set them directly using the builder methods or create a `mana_abilities.yml` file in your content directory in the same format as the AuraSkills file, but with the mana ability name being your mana ability's NamespacedId of course. You should define all the necessary options using one of the two methods, otherwise they will use arbitrary default values.
+
+Make sure to register your `CustomManaAbility` in your plugin's onEnable.
+
+```java
+AuraSkillsApi auraSkills = AuraSkillsApi.get();
+
+NamespacedRegistry registry = auraSkills.useRegistry("pluginnanme", getDataFolder());
+
+registry.registerManaAbility(CustomManaAbilities.LEAP);
+```
+
+You must then implement the functionality for your mana ability yourself using Bukkit events and other API calls to get the mana ability values. For example, to get the value for a user, get the mana ability level using `SkillsUser#getManaAbilityLevel` and pass it into `ManaAbility#getValue`:
+
+```java
+SkillsUser user = auraSkills.getUser(player.getUniqueId());
+ManaAbility manaAbility = CustomManaAbilities.LEAP;
+int level = user.getManaAbilityLevel(manaAbility);
+
+double value = manaAbility.getValue(level);
+double cooldown = manaAbility.getCooldown(level);
+double manaCost = manaAbility.getManaCost(level);
+```
