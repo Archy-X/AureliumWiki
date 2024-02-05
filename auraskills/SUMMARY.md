@@ -3,6 +3,7 @@
 * [AuraSkills](README.md)
 * [Main Config](main-config.md)
 * [Skills](skills.md)
+* [Stats](stats.md)
 * [Sources](sources.md)
 * [Rewards](rewards.md)
 * [Loot](loot.md)
