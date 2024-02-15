@@ -17,7 +17,7 @@ Upon reaching a new skill level, players can be rewarded with:
   * Items
   * Money
 
-There are 15 skills included in the plugin:
+There are 11 default skills included in the plugin:
 
 * Farming
 * Foraging
@@ -27,13 +27,16 @@ There are 15 skills included in the plugin:
 * Archery
 * Defense
 * Fighting
-* Endurance
 * Agility
 * Enchanting
 * Alchemy
-* Sorcery
-* Healing
-* Forging
+
+There are 4 skills present in Beta that were merged or removed in default configs. Servers that migrated from Beta or loaded the legacy preset have these additional skills:
+
+* Endurance (merged into Agility in default)
+* Healing (merged into Alchemy in default)
+* Forging (merged into Enchanting in default)
+* Sorcery (removed from default)
 
 ## Configuration
 
@@ -76,7 +79,6 @@ The `mana_ability` key is the name (full Namespaced ID) of the mana ability of t
 
 #### Archery and fighting options
 
-* `damage_based` - If true, XP will be given when a player damages a mob, rather than on the mob's death. This will still use the xp values in the sources files to calculate the given xp _per damage done_ (given XP = source XP \* damage). Thus, it is recommended to greatly lower the values in the sources files if setting this option to true.
 * `spawner_multiplier` - Multiplies the given XP by this value for mobs spawned by a mob spawner block. Set to 0 to disable XP from spawners.
 
 #### Defense options
@@ -85,23 +87,9 @@ The `mana_ability` key is the name (full Namespaced ID) of the mana ability of t
 * `min` - The minimum amount of XP required to be rewarded. If the XP is lower than min, no XP will be given.
 * `allow_shield_blocking` - Whether XP should be given when a player is hit while blocking with a shield.
 
-#### Endurance options
-
-* `xp_gain_period` - How often to give Endurance XP, in ticks. This will apply to all statistic sources.
-
 #### Alchemy options
 
-* `give_xp_on_takeout` - If true, XP for Alchemy will be given when the potion is taken out of the brewing stand by a player, rather then as soon as the potion is brewed. Setting this to true will prevent automatic brewing from giving XP.
-* `give_xp_on_potion_combat` - If true, using a splash potion to damage an entity will give XP for Alchemy instead of Fighting/Archery.
 * `ignore_custom_potions` - If true, potions with custom effects (non-brewable potions) will not work with Alchemy abilities such as Alchemist, Sugar Rush, and Splasher.
-
-#### Healing options
-
-* `exclude_negative_potions` - If true, drinking or splashing potions that give negative effects (debuffs) will not give Healing XP.
-
-#### Forging options
-
-* `blocked_grindstone_enchants` - A list of enchants to not give XP for when disenchanting an item in a grindstone. Names of unremovable enchants (curses) from custom enchant plugins should be added here.
 
 ## Commands
 

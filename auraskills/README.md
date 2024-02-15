@@ -20,9 +20,9 @@ Players level up [skills](skills.md) by gaining skill XP through general Minecra
 
 > Main article: [Skills](skills.md)
 
-There are 15 skills included in AuraSkills which level up as players gain skill XP through various XP sources. By default, each skill has two stats that increase every 1 or 2 skill levels. Most skills also have 5 passive abilities that unlock at levels 2-6 and level up every 5 skill levels. Some skills have a mana ability, which is a special ability that must be activated by the player, costs mana, and has a cooldown.
+There are 11 default skills included in AuraSkills which level up as players gain skill XP through various XP sources. By default, each skill has two stats that increase every 1 or 2 skill levels. Most skills also have 5 passive abilities that unlock at levels 2-6 and level up every 5 skill levels. Some skills have a mana ability, which is a special ability that must be activated by the player, costs mana, and has a cooldown.
 
-The 15 skills are Farming, Foraging, Mining, Fishing, Excavation, Archery, Defense, Fighting, Endurance, Agility, Enchanting, Alchemy, Sorcery, Healing, and Forging.
+The 11 skills are Farming, Foraging, Mining, Fishing, Excavation, Archery, Defense, Fighting, Agility, Enchanting, and Alchemy. The existing 15 skills from Beta can be added back by loading the legacy preset.
 
 Skills can be viewed using `/skills` or by using the command for an individual skill, such as `/farming`, `/mining`, etc.
 

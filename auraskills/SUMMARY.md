@@ -4,6 +4,8 @@
 * [Main Config](main-config.md)
 * [Skills](skills.md)
 * [Stats](stats.md)
+* [Abilities](abilities.md)
+* [Mana Abilities](mana-abilities.md)
 * [Sources](sources.md)
 * [Rewards](rewards.md)
 * [Loot](loot.md)
