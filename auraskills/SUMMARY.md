@@ -13,4 +13,5 @@
 * [Migration](migration.md)
 * [Commands](commands.md)
 * [Permissions](permissions.md)
+* [Placeholders](placeholders.md)
 * [API](api.md)
