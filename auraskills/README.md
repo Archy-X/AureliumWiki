@@ -4,7 +4,7 @@ description: Welcome to the AuraSkills wiki!
 
 # AuraSkills
 
-**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills.md), stats, abilities, and other RPG-related features. Developed for the Spigot and Paper server platforms, the plugin can be downloaded for free on [SpigotMC](https://www.spigotmc.org/resources/81069/), [Hangar](https://hangar.papermc.io/Archy/AureliumSkills), [Modrinth](https://modrinth.com/plugin/aureliumskills), and [Polymart](https://polymart.org/resource/aurelium-skills.738). The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
+**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills.md), [stats](stats.md), [abilities](abilities.md), and other RPG-related features. Developed for the Spigot and Paper server platforms, the plugin can be downloaded for free on [SpigotMC](https://www.spigotmc.org/resources/81069/), [Hangar](https://hangar.papermc.io/Archy/AureliumSkills), [Modrinth](https://modrinth.com/plugin/aureliumskills), and [Polymart](https://polymart.org/resource/aurelium-skills.738). The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
 
 This wiki contains documentation on how to set up, configure, and use the plugin. Support from the developer is provided on the [Discord](https://wiki.aurelium.dev/skills/) server, where users can also give suggestions, report bugs, and get announcements. AuraSkills is open-sourced on [GitHub](https://github.com/Archy-X/AureliumSkills).
 
@@ -71,3 +71,9 @@ The `loot/` folder contains loot tables for certain skills. By default, Fishing 
 > Main article: [Menus](menus.md)
 
 The `menus/` folder contains the menu files used to change the appearance of the plugin's GUI menus such as `/skills`. Almost anything related to a menu's appearance can be customized, including adding new items or adding actions to execute when clicking an item.
+
+## API
+
+> Main article: [API](api.md)
+
+AuraSkills provides an extensive API that allows developers to hook into the plugin and interact with users, listen to events, and add custom content.
