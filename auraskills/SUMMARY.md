@@ -20,3 +20,5 @@
 * [Placeholders](placeholders.md)
 * [Migration](migration.md)
 * [API](api.md)
+* [FAQ](faq.md)
+* [Incompatibilities](incompatibilities.md)
