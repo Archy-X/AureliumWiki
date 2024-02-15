@@ -2,9 +2,9 @@
 description: Guide to stat modifiers
 ---
 
-# Modifiers
+# Stat Modifiers
 
-**Modifiers** are temporary [stat](stats.md) buffs on a player. They come in 3 different types and are interacted with primarily using commands. Regular modifiers are attached to a name and are always active unless removed. Item modifiers apply when holding an item. Armor modifiers apply when wearing armor.
+**Modifiers** are temporary [stat](./) buffs on a player. They come in 3 different types and are interacted with primarily using commands. Regular modifiers are attached to a name and are always active unless removed. Item modifiers apply when holding an item. Armor modifiers apply when wearing armor.
 
 ## Regular Modifiers
 

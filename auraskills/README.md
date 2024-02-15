@@ -4,7 +4,7 @@ description: Welcome to the AuraSkills wiki!
 
 # AuraSkills
 
-**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills.md), [stats](stats.md), [abilities](abilities.md), and other RPG-related features. Developed for the Spigot and Paper server platforms, the plugin can be downloaded for free on [SpigotMC](https://www.spigotmc.org/resources/81069/), [Hangar](https://hangar.papermc.io/Archy/AureliumSkills), [Modrinth](https://modrinth.com/plugin/aureliumskills), and [Polymart](https://polymart.org/resource/aurelium-skills.738). The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
+**AuraSkills** (formerly **Aurelium Skills**) is a Minecraft plugin that adds [skills](skills/), [stats](stats/), [abilities](abilities.md), and other RPG-related features. Developed for the Spigot and Paper server platforms, the plugin can be downloaded for free on the official [plugin website](https://aurelium.dev/auraskills/download), [SpigotMC](https://www.spigotmc.org/resources/81069/), [Hangar](https://hangar.papermc.io/Archy/AureliumSkills), and [Modrinth](https://modrinth.com/plugin/aureliumskills). The plugin is fully configurable and customizable, enabling use on a wide-range of server types from small SMPs to large, custom MMORPG networks.
 
 This wiki contains documentation on how to set up, configure, and use the plugin. Support from the developer is provided on the [Discord](https://wiki.aurelium.dev/skills/) server, where users can also give suggestions, report bugs, and get announcements. AuraSkills is open-sourced on [GitHub](https://github.com/Archy-X/AureliumSkills).
 
@@ -14,13 +14,13 @@ This wiki is for AuraSkills 2.0+ only. For the old wiki (AureliumSkills Beta 1.3
 
 ## Overview
 
-Players level up [skills](skills.md) by gaining skill XP through general Minecraft tasks, such as Farming, Mining, Fighting, or Enchanting. Increasing levels for each skill gives the player [stat buffs](stats.md), unlocks and levels up [passive](abilities.md) and [mana abilities](mana-abilities.md), and other customizable [rewards](rewards.md). Using `/skills`, players can view all the relevant information about skills and gameplay in fully-configurable inventory GUI [menus](menus.md). Certain Fishing and Excavation abilities drop custom loot, which can be customized and extended to other skills through [loot tables](loot.md). Players can compete with each other through leaderboards and rankings. Custom items can also be created that give stat modifiers when held or worn, skill requirements to use, and XP multipliers. Numerous [commands](commands.md) and [permissions](permissions.md) allow server admins to manage players and control access to features.
+Players level up [skills](skills/) by gaining skill XP through general Minecraft tasks, such as Farming, Mining, Fighting, or Enchanting. Increasing levels for each skill gives the player [stat buffs](stats/), unlocks and levels up [passive](abilities.md) and [mana abilities](mana-abilities.md), and other customizable [rewards](rewards.md). Using `/skills`, players can view all the relevant information about skills and gameplay in fully-configurable inventory GUI [menus](menus.md). Certain Fishing and Excavation abilities drop custom loot, which can be customized and extended to other skills through [loot tables](loot.md). Players can compete with each other through leaderboards and rankings. Custom items can also be created that give stat modifiers when held or worn, skill requirements to use, and XP multipliers. Numerous [commands](commands.md) and [permissions](permissions.md) allow server admins to manage players and control access to features.
 
 ## Skills
 
-> Main article: [Skills](skills.md)
+> Main article: [Skills](skills/)
 
-There are 11 default skills included in AuraSkills which level up as players gain skill XP through various XP sources. By default, each skill has two [stats](stats.md) that increase every 1 or 2 skill levels. Most skills also have 5 passive [abilities](abilities.md) that unlock at levels 2-6 and level up every 5 skill levels. Some skills have a [mana ability](mana-abilities.md), which is a special ability that must be activated by the player, costs mana, and has a cooldown.
+There are 11 default skills included in AuraSkills which level up as players gain skill XP through various XP sources. By default, each skill has two [stats](stats/) that increase every 1 or 2 skill levels. Most skills also have 5 passive [abilities](abilities.md) that unlock at levels 2-6 and level up every 5 skill levels. Some skills have a [mana ability](mana-abilities.md), which is a special ability that must be activated by the player, costs mana, and has a cooldown.
 
 The 11 skills are Farming, Foraging, Mining, Fishing, Excavation, Archery, Defense, Fighting, Agility, Enchanting, and Alchemy. The existing 15 skills from Beta can be added back by loading the legacy preset.
 
@@ -34,7 +34,7 @@ There a multiple configuration files in the `plugins/AuraSkills` directory that 
 
 ### Main Config
 
-> Main article: [Main Config](main-config.md)
+> Main article: [Main Config](main-config/)
 
 The main `config.yml` file is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
 

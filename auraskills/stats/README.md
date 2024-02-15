@@ -6,7 +6,7 @@ description: Guide to stats and the stats.yml file
 
 **Stats** are values that represent specific gameplay buffs called **traits.** A player's stat levels and their descriptions can be viewed in the stats menu using `/stats` or by clicking the stat item (their player head by default) in the main skills menu.
 
-Stats are gained alongside leveling skills; each skill has a primary stat that increases for every skill level and a secondary stat that increases every other skill level. These are configured through [stat rewards](rewards.md#stat-rewards-stat). Stats can also be increased through modifiers created with commands or on items.
+Stats are gained alongside leveling skills; each skill has a primary stat that increases for every skill level and a secondary stat that increases every other skill level. These are configured through [stat rewards](../rewards.md#stat-rewards-stat). Stats can also be increased through modifiers created with commands or on items.
 
 **Traits** are values for the singular gameplay aspect that a stat affects. Since some stats have multiple effects, such as Wisdom's experience bonus and max mana increase, traits allow these effects to be configured independently as well as swapped between stats. Traits increase in value based on a constant multiplier of the stat level, which allows stat levels to display in a more user-friendly level while the trait is decimal that directly shows its effect.
 
