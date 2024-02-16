@@ -4,7 +4,7 @@ description: Guide to the messages files
 
 # Messages
 
-The `messages/` folder contains messages and translation files for many languages. All content translatable, including commands, menus, and chat.&#x20;
+The `messages/` folder contains messages and translation files for many languages. All content is translatable, including commands, menus, and chat.&#x20;
 
 The default language of the server can be set using the `default_language` option in `config.yml`. If this does not set everyone to your preferred server language, players can run `/skills lang [language]` to set their own language, where `[language]` is a valid two-letter code that is in the `languages` list in the config (and the file name after `messages_`).
 
