@@ -16,7 +16,7 @@ The expression can be changed as you wish, but it must be a valid EvalEx express
 The result of the expression will always be rounded to the nearest whole number
 {% endhint %}
 
-Variables are also supported in expressions. In order to have a different XP required for each level, you must have the `level` variable in the expression somewhere. This variable corresponds to the level that is unlocked upon reaching the required XP. The `level` starts at 2 and goes up to the maximum level of the skill. For example, the result of the expression when `level` is 5 is the XP need to go from level 4 to 5.
+Variables are also supported in expressions. In order to have a different XP required for each level, you must have the `level` variable in the expression somewhere. This variable corresponds to the level that is unlocked upon reaching the required XP. The `level` starts at the config.yml `start_level+1` and goes up to the maximum level of the skill. For example, the result of the expression when `level` is 5 is the XP need to go from level 4 to 5.
 
 Custom variables are also supported, which allow you to label and organize the parts of your expression. Instead of using the numbers directly in the expression, you can turn it into a variable that is specified in its own key. In the default expression shown below, `multiplier` and `base` are examples of custom variables.
 

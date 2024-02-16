@@ -15,6 +15,7 @@
 * [Rewards](rewards.md)
 * [Loot](loot.md)
 * [Menus](menus.md)
+* [Messages](messages.md)
 * [Commands](commands.md)
 * [Permissions](permissions.md)
 * [Placeholders](placeholders.md)
