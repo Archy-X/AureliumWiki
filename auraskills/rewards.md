@@ -213,8 +213,4 @@ Item rewards by default use the display name or localized name of the item in th
 
 Stat reward messages are automatically handled because it always uses the `menus.level_progression_menu.rewards_entry` message key for menu messages and the `leveler.stat_level` message key for chat messages. You should edit those values in the messages file to change what stat reward messages look like.
 
-Money reward messages are automatically handled through the `menus.level_progression_menu.money_reward` message key for menu messages and the `leveler.money_reward` message key for chat messages. All money rewards amounts for a particular level are added together into a single message, including money rewards from the legacy skill-money-rewards section of config.yml
-
-## Learn more
-
-Still confused or syntax not working? Try looking over the [example rewards file](https://github.com/Archy-X/AureliumSkills/blob/master/bukkit/src/main/resources/rewards/example\_rewards.yml)
+Money reward messages are automatically handled through the `menus.level_progression_menu.money_reward` message key for menu messages and the `leveler.money_reward` message key for chat messages. All money rewards amounts for a particular level are added together into a single message.

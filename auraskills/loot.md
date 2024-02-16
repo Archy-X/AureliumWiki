@@ -157,3 +157,50 @@ The way loot is selected is fairly straightforward:
 1. The loot table is determined by skill that corresponds to the action the player does. For block based loot, the block must be a source for a supported skill (foraging, mining, excavation).
 2. A loot pool is selected from the loot table starting from the highest priority loot pool. Whether pool is selected is base on the pool's base\_chance and any added chances. If a pool is not selected, the pool with the next highest selection priority will be attempted. If no loot pool gets selected, the below steps do not apply.
 3. A single loot entry is selected from the pool based on the weight of the entry. A higher weight makes it more likely for it to be selected. The exact chance is calculated by `weight / sum of all weights in pool`.
+
+## Custom loot tables
+
+Completely new loot table files can be created for any skill with block sources or for mobs. This means the following new loot table file names are supported in the `loot/` folder:
+
+* `farming.yml`
+* `foraging.yml`
+* `mining.yml`
+* `mob.yml`
+
+### Mob
+
+For the mob loot table, add a `mobs` list to a loot entry to specific which mob it drops from. You should also specific `type: mob` at the beginning of the file. For example, the following loot entry drops a custom enchanted book (from a different plugin) when killing a blaze:
+
+{% code title="loot/mob.yml" %}
+```yaml
+type: mob
+pools:
+  adrenaline:
+    base_chance: 0.5
+    loot:
+      - type: item
+        material: enchanted_book
+        enchantments: [adrenaline 1-3]
+        mobs: [blaze]
+```
+{% endcode %}
+
+### Block
+
+Block loot tables must have `type: block` at the top of the file. When specifying the `sources` list, the values must be the exact name used as the section name inside the corresponding `sources` config file (not the material name).
+
+The following is an example custom Farming loot table that has a 0.05% chance to drop an enchanted golden apple when breaking carrots. This will automatically handle breaking only fully-grown crops (for crops with growth stages) and naturally-grown crops (for things like melon and pumpkin).
+
+{% code title="loot/farming.yml" %}
+```yaml
+type: block
+pools:
+  carrot:
+    base_chance: 0.05
+    loot:
+      - type: item
+        material: enchanted_golden_apple
+        amount: 1
+        sources: [carrot]
+```
+{% endcode %}
