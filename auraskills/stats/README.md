@@ -15,7 +15,7 @@ There are 9 stats by default, with the trait(s) they level up also shown:
 * Strength -> Attack Damage
 * Health -> Hp
 * Regeneration -> Saturated Regen, Hunger Regen, Mana Regen
-* Luck -> Luck, Double Drop
+* Luck -> Farming Luck, Foraging Luck, Mining Luck, Excavation Luck, Fishing Luck
 * Wisdom -> Experience Bonus, Anvil Discount, Max Mana
 * Toughness -> Damage Reduction
 * Crit Chance -> Crit Chance
