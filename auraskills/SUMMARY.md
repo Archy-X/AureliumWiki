@@ -2,7 +2,7 @@
 
 * [AuraSkills](README.md)
 * [Main Config](main-config/README.md)
-  * [MySQL](main-config/mysql.md)
+  * [SQL](main-config/sql.md)
 * [Skills](skills/README.md)
   * [XP Requirements](skills/xp-requirements.md)
   * [XP Multipliers](skills/xp-multipliers.md)

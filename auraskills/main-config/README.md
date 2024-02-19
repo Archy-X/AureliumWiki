@@ -14,19 +14,20 @@ Last Updated Version: `2.0.0`
 
 ## Options
 
-### MySQL
+### SQL
 
-`mysql:`
+`sql:`
 
-* `enabled` - Whether MySQL should be used for data storage (requires a restart to enable)
-* `host` - MySQL hostname
+* `enabled` - Whether SQL should be used for data storage (requires a restart to enable).
+* `type` - The type of SQL database to use; currently only `mysql` is supported.
+* `host` - SQL hostname
 * `port`- Port (must be number)
 * `database` - Database name (must be created already)
-* `username` - MySQL username
-* `password` - MySQL password
-* `load_delay` - Number of ticks to delay loading data after a player joins, useful for syncing multiple servers to a single database
-* `always_load_on_join` - If true, player data will always be loaded from the database when a player joins, regardless if it is already in memory
-* `ssl` - Whether to use SSL
+* `username` - SQL username
+* `password` - SQL password
+* `load_delay` - Number of ticks to delay loading data after a player joins, useful for syncing multiple servers to a single database.
+* `always_load_on_join` - If true, player data will always be loaded from the database when a player joins, regardless if it is already in memory.
+* `ssl` - Whether to use SSL.
 
 ### Languages
 
