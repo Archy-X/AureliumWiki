@@ -23,3 +23,7 @@
 * [API](api.md)
 * [FAQ](faq.md)
 * [Incompatibilities](incompatibilities.md)
+
+## Release Notes
+
+* [2.0](release-notes/2.0.md)

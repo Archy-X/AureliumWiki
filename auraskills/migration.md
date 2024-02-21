@@ -4,10 +4,6 @@ description: How to migrate from AureliumSkills Beta 1.3 to AuraSkills 2.0
 
 # Migration
 
-{% hint style="danger" %}
-Migration is currently experimental and not fully tested. Only test migration on a dev server and **not in production**.
-{% endhint %}
-
 With the 2.0 update, the plugin itself has been renamed from AureliumSkills to AuraSkills. This means that the name of the plugin folder is now `/AuraSkills` instead of `/AureliumSkills`.
 
 While it is recommended to start with a clean config to get the many balancing changes in the recode, there is a system for migrating old config options to the new folder automatically. However, not everything will be able to be migrated, so manual work will still be required depending on how much you modified the configs.
