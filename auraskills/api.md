@@ -12,21 +12,16 @@ Javadocs are available [here](https://docs.aurelium.dev/auraskills-api-bukkit/).
 
 ## Getting Started
 
-Release versions are published to the Maven central repository, while versions ending in -SNAPSHOT are published to the Sonatype Nexus Snapshot repository.
+Release versions are published to the Maven central repository.
 
 ### Maven
 
 {% code title="pom.xml" %}
 ```xml
-<repository>
-    <id>sonatype</id>
-    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-</repository>
-
 <dependency>
     <groupId>dev.aurelium</groupId>
     <artifactId>auraskills-api-bukkit</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 {% endcode %}
@@ -39,11 +34,10 @@ Groovy DSL:
 ```gradle
 repositories {
      mavenCentral()
-     maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
 }
 
 dependencies {
-     compileOnly 'dev.aurelium:auraskills-api-bukkit:2.0.0-SNAPSHOT'
+     compileOnly 'dev.aurelium:auraskills-api-bukkit:2.0.0'
 }
 ```
 {% endcode %}
@@ -54,11 +48,10 @@ Kotlin DSL:
 ```gradle
 repositories {
      mavenCentral()
-     maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 dependencies {
-     compileOnly("dev.aurelium:auraskills-api-bukkit:2.0.0-SNAPSHOT")
+     compileOnly("dev.aurelium:auraskills-api-bukkit:2.0.0")
 }
 ```
 {% endcode %}
