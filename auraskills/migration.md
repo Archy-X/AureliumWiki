@@ -39,3 +39,13 @@ If you are planning on starting a new season/world/server, you do not need to mi
 * `xp_requirements.yml` (format unchanged)
 * `abilities_config.yml` (separated into `abilities.yml` and `mana_abilities.yml`)
 * Item/armor modifiers when held
+
+## Skill merger
+
+In the default configs, the number of skills has been reduced from 15 to 11. However, if you migrate from Beta, you will still have the existing 15 skills and their abilities. But if you want to migrate user data and merge the skills like the new default configs, you will need to do some manual work:
+
+* Delete the skills.yml, abilities.yml, menus folder, rewards folder, and sources folder to let them regenerate. If you modified rewards, abilities\_config.yml, or the sources\_config.yml in Beta, you will have to manually add your changes back.
+* Run the following commands in the console which set every user's skill level for the merged skills to the higher out of the two previous skills. Make sure no players are online when you run this.
+  * `skills storage mergeskills auraskills/endurance auraskills/agility`
+  * `skills storage mergeskills auraskills/healing auraskills/alchemy`
+  * `skills storage mergeskills auraskills/forging auraskills/enchanting`
