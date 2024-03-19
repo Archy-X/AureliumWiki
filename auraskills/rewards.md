@@ -164,6 +164,7 @@ Money rewards simply give money on level up through Vault Economy.
 Keys:
 
 * `amount` - The amount of money to give
+* `formula` - An expression for determining the amount of money to give for a given `level` variable. Cannot be used with `amount`.
 
 Example:
 
@@ -172,7 +173,19 @@ Example:
   amount: 1000
 ```
 
-If you don't use Vault or have special currencies, you can still give money using command rewards. You can also make complex amount equations easily through pattern command rewards combined with the {level} placeholder and PlaceholderAPI math placeholders. Here is an example:
+Example patterns section in for replacing legacy money rewards:
+
+{% code title="rewards/global.yml" %}
+```yaml
+patterns:
+  - type: money
+    formula: '100+10*level*level'
+    pattern:
+      interval: 1
+```
+{% endcode %}
+
+If you don't use Vault or have special currencies, you can still give money using command rewards. Here is an example:
 
 ```yaml
 - type: command
