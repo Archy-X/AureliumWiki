@@ -29,6 +29,7 @@ If you are planning on starting a new season/world/server, you do not need to mi
 * Menus (significant format changes)
 * PlaceholderAPI placeholders for %aureliumskills\_...% will still work for now, but you should change them to %auraskills\_...% eventually
 * Custom XP sources added in the custom section of the old sources\_config.yml
+* Items registered in the item registry using `/sk item register` will be reset. You will have to re-register your items for them to work in rewards/loot because of NBT format changes to modifiers.
 
 ## What will migrate automatically
 
