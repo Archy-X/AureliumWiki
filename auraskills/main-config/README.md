@@ -161,6 +161,12 @@ Options for each hook are under the section with the plugin name.
   * `pitch` - Sound pitch
 * `double_check_delay` - The level up check delay for large xp gains at once, in ticks (lower is faster).
 
+### Mana
+
+`mana:`
+
+* `enabled` - If false, mana abilities will not cost mana to use and mana displays will be hidden from the action bar and menus.
+
 ### Modifier
 
 `modifier:`
@@ -212,6 +218,7 @@ Options for each hook are under the section with the plugin name.
 
 `menus:`
 
+* `lore_wrapping_width` - The number of characters per line before newlines are automatically inserting in menu lore lines where wrapping is enabled.
 * `placeholder_api` - Whether PlaceholderAPI placeholders should be used in menus.
 * `stats:`
   * `show_trait_values_directly` - If true, stats that have a single trait with a `modifier` of exactly 1 will show the value of the trait instead in menus. This allows trait base values, such as the 20 HP every player has by default, to be included in the shown level.

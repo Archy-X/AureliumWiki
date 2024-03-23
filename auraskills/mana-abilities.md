@@ -36,3 +36,11 @@ Configuring mana abilities is done in `mana_abilities.yml`. The format is simila
 ## Messages
 
 The names and descriptions of mana abilities can be edited in the `mana_abilities` section of the messages file.
+
+## Disabling mana
+
+While mana is a core component of the mana abilities system, the mana system can be essentially disabled through a few steps:
+
+1. Set the `mana.enabled` option in `config.yml` to false. This removes mana costs from mana abilities and most mentions of mana in menus. While most mana abilties will still work just without a mana cost, the Absorption and Charged Shot mana abilities will be disabled because their mechanics fully depend on mana.
+2. In the `messages/global.yml` file, edit the `action_bar.idle` message by removing the `{{action_bar.mana_display}}` part and extra spaces. Since the idle action would just display health, you probably want to disable it completely by setting `action_bar.idle` to false in `config.yml`.
+3. Up to this step, mana has already been functionally disabled. But to fully remove mentions of mana in menus, replace mentions of the word "Mana" in the messages file of your language to something else, like "Active Ability" for example.

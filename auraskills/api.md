@@ -21,7 +21,7 @@ Release versions are published to the Maven central repository.
 <dependency>
     <groupId>dev.aurelium</groupId>
     <artifactId>auraskills-api-bukkit</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.3</version>
 </dependency>
 ```
 {% endcode %}
@@ -37,7 +37,7 @@ repositories {
 }
 
 dependencies {
-     compileOnly 'dev.aurelium:auraskills-api-bukkit:2.0.0'
+     compileOnly 'dev.aurelium:auraskills-api-bukkit:2.0.3'
 }
 ```
 {% endcode %}
@@ -51,7 +51,7 @@ repositories {
 }
 
 dependencies {
-     compileOnly("dev.aurelium:auraskills-api-bukkit:2.0.0")
+     compileOnly("dev.aurelium:auraskills-api-bukkit:2.0.3")
 }
 ```
 {% endcode %}

@@ -136,6 +136,7 @@ The entity source (`type: entity`) gives XP for a player killing or damaging an 
 * `triggers` - A list of multiple triggers.
 * `damager` - A damager to match when giving XP, which can either be `player`, `projectile`, or `thrown_potion`.
 * `damagers` - A list of multiple valid damagers.
+* `scale_xp_with_health` - If the `trigger` is damage, the damage XP multiplier will be scaled by the damaged mob's max health. The total XP gained from killing a mob will be consistent between death and damage triggers. Defaults to true.
 
 ### Fishing
 

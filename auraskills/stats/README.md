@@ -82,6 +82,10 @@ The traits section contains configurable options specific to each trait. These o
 * `allow_overflow` - Whether to allow mana amounts higher than max, such as when a player's max mana decreases but their previous mana was higher than the new max.
 * `base` - The base amount of max mana players have when the trait is at level 0.
 
+#### Damage reduction
+
+* `formula` - The formula for calculating damage reduction from the trait value. The input variable `value` is the trait value (which is after the stat value is multiplied by the trait modifier). The expression result is a decimal from 0 to 1 where 0 is no damage reduction and 1 is all damage blocked. For example, an expression result of 0.32 means 32% damage reduction.
+
 #### Crit chance
 
 * `base` - The base amount of crit chance players have when the trait is at level 0.
