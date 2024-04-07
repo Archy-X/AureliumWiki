@@ -64,9 +64,25 @@ The `formats` section are key-value pairs used as formatting for lore in other i
 
 ### Options
 
+#### skills:
+
+* `bar_length` - The total number of characters displayed in the XP bar. Also applies to XP bars in the level progression menu.
+
 **level\_progression:**
 
 * `use_level_as_amount` - When true, the level templates (unlocked, in\_progress, and locked) will have their item amount set to the level number they represent (at level 30 the item amount willl be 30). Above the max stack size of the item (usually 64), the value of `over_max_stack_amount` is used.
+* `over_max_stack_amount` - The item amount to use for skill level items for levels above the item's maximum stack size. Only applies when `use_level_as_amount` is true.
+* `items_per_page` - The number of skill level items (unlocked/in\_progress/locked) to show per menu page.
+* `start_level` - The level shown on the first skill level item.
+* `track` - A list of slot numbers ranged 0-54 for positioning skill level items. The index of the track matches the index of the skill level item within a specific page, so the length of track should match `items_per_page`.
+
+#### sources:
+
+* `source_start` - The upper left slot position of the rectangle formed by source items.
+* `source_end` - The lower right slot position of source items.
+* `items_per_page` - The number of source items to show per menu page.
+* `use_track` - Whether to use the `track` list to determine source item positions instead of `source_start` and `source_end`.
+* `track` - A list of slot numbers ranged 0-54 for positioning source items.
 
 ## Colors and formatting
 
