@@ -239,6 +239,7 @@ Further options can be used to narrow down the item more specifically than just 
   * `excluded_types` - A list of multiple types of potions to exclude from matching.
   * `extended` - Whether the potion must have an extended duration.
   * `upgraded` - Whether the potion must have an upgraded level.
+* `custom_model_data` - An integer to match the CustomModelData id of an item. Both the material and custom\_model\_data must match to pass the filter.
 
 ### Examples
 
@@ -289,7 +290,7 @@ The above example default section for a block source will replace the `{block}` 
 
 The `tags` section of a source file is used to configure plugin-provided list of sources for certain abilities or mechanics. You cannot add or remove tags from the section, only modify the list of the provided tags.
 
-For example, the `bountiful_harvest_applicable` tag is the list of sources that will apply the double drop bonus of the bountiful harvest ability.
+For example, the `farming_luck_applicable` tag is the list of sources that will apply the double drop bonus of the Farming Luck trait.
 
 ### Wildcards and exclusions
 
@@ -299,20 +300,20 @@ If you want to exclude a source from the list that already has a wildcard withou
 
 ```yaml
 tags:
-  bountiful_harvest_applicable:
+  farming_luck_applicable:
     - '*'
     - '!sugar_cane'
 ```
 
-In the example above, all farming sources except sugar cane will apply to bountiful harvest.
+In the example above, all farming sources except sugar cane will apply to Farming Luck.
 
 ```yaml
 tags:
-  triple_harvest_applicable:
+  farming_luck_applicable:
     - wheat
     - potato
     - carrot
     - beetroot
 ```
 
-This example shows making bountiful harvest only applicable to wheat, potato, carrot, and beetroot. Note that the names used in the list are the source names (section names under `sources`), not the value of `block` within the source.
+This example shows making Farming Luck only applicable to wheat, potato, carrot, and beetroot. Note that the names used in the list are the source names (section names under `sources`), not the value of `block` within the source.

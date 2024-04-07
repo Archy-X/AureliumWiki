@@ -64,12 +64,9 @@ The `formats` section are key-value pairs used as formatting for lore in other i
 
 ### Options
 
-The `options` section contains configurable settings that can change menu behavior or appearance. These are the available options for each menu (only menus listed below have options):
-
 **level\_progression:**
 
 * `use_level_as_amount` - When true, the level templates (unlocked, in\_progress, and locked) will have their item amount set to the level number they represent (at level 30 the item amount willl be 30). Above the max stack size of the item (usually 64), the value of `over_max_stack_amount` is used.
-* `over_max_stack_amount` - The amount to set for level templates above the max stack size when `use_level_amount` is true.
 
 ## Colors and formatting
 

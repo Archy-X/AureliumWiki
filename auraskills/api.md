@@ -195,7 +195,7 @@ To register custom content, you must first obtain a NamespacedRegistry that iden
 AuraSkillsApi auraSkills = AuraSkillsApi.get(); // Get the API instance
 
 // Getting the NamespacedRegistry with your plugin name and the plugin's folder
-NamespacedRegistry registry = auraSkills.useRegistry("pluginnanme", getDataFolder());
+NamespacedRegistry registry = auraSkills.useRegistry("pluginname", getDataFolder());
 ```
 
 The first argument of `useRegistry` is the name of your plugin registering the custom content (it will be forced to lowercase). This is the namespace part of all content that is identified by a NamespacedId, and is used in config files like skills.yml, abilities.yml, etc.
@@ -276,7 +276,7 @@ public class DodgeChanceTrait implements BukkitTraitHandler, Listener {
 
     @Override
     public Trait[] getTraits() {
-        // Aan array containing your CustomTrait instance
+        // An array containing your CustomTrait instance
         return new Trait[] {CustomTraits.DODGE_CHANCE};
     }
     
@@ -409,7 +409,7 @@ public class TradingSource extends CustomSource {
 
 Then, you need to register your source type and create a parser to deserialize the source from configuration. Use `NamespacedRegistry#registerSourceType` to register the name and parser of your source.&#x20;
 
-The first argument, name, is a lowercase name for your source used to construct it's NamspacedId used as the `type` key in the sources config. If you pass in `trading` as the name, you would use `type: pluginname/trading` in the sources config.
+The first argument, name, is a lowercase name for your source used to construct its NamspacedId used as the `type` key in the sources config. If you pass in `trading` as the name, you would use `type: pluginname/trading` in the sources config.
 
 The second argument accepts an instance of `XpSourceParser` where the type parameter is your `CustomSource` class. You can create a new class, or use a lambda like in this example:
 
