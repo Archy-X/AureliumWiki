@@ -10,7 +10,7 @@ Options for each [skill](../skills/) and stat were formerly here, but have been 
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
-Last Updated Version: `2.0.0`
+Last Updated Version: `2.0.6`
 
 ## Options
 
