@@ -99,3 +99,45 @@ Placeholders are used in the menu configuration to allow the plugin to insert co
 * Single curly braces (`{example}`) - Replaced internally by the plugin for variable data such as player levels and XP. They only work within the same item they were originally defined in (or a component attached to the item), so it should not be moved outside the item.
 * Double curly braces (`{{example}}`) - Message placeholders replaced by the message key defined in the messages file by the key `menus.[menu_name].[placeholder]` where `[menu_name]` is the name of the menu and `[placeholder]` is the text within the double curly braces. If this key doesn't exist, it will look at the key `menus.common.[placeholder]` for the message. The player's set language determines which message file the message will come from, allowing the single menu configuration to work with any language.
 * PlaceholderAPI placeholders (`%example%`) - Placeholders within percent symbols are PlaceholderAPI placeholders. They can either be AuraSkills placeholders or for any other plugin. The PlaceholderAPI plugin must be installed for them to work (and necessary ecloud expansions for other plugins).
+
+## Custom menus
+
+Custom menus can be created by creating a file in the `menus` folder with a `.yml` extension. The name of the file is the name used to refer to it in commands and other menus. Custom menus use the same file format as the default menus, though the templates, components, formats, and options sections will not work. PlaceholderAPI placeholders and click actions are supported like existing menus.
+
+Custom menus can be opened using the `/sk openmenu` command or through menu open click actions from other menus.&#x20;
+
+An example custom menu named test created at `menus/test.yml`:&#x20;
+
+{% code title="test.yml" %}
+```yaml
+title: Test menu
+fill:
+  enabled: true
+  material: black_stained_glass_pane
+items:
+  test:
+    material: diamond
+    display_name: <green>Test item
+    lore:
+      - <red>Test lore line
+      - ' '
+      - <yellow>Click to return to skills menu 
+    on_click:
+      - type: menu
+        action: open
+        menu: skills
+```
+{% endcode %}
+
+This menu can be opened from an existing menu by adding click actions, such as the your\_skills item in the skills menu:
+
+{% code title="skills.yml" %}
+```yaml
+items:
+  your_skills:
+    on_click:
+      - type: menu
+        action: open
+        menu: test
+```
+{% endcode %}

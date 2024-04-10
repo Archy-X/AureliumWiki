@@ -17,9 +17,13 @@ patterns:
   - type: stat # Start of first object in list
     stat: strength
     value: 1
+    pattern:
+      interval: 1
   - type: stat # Start of second object in list
     stat: health
     value: 1.5
+    pattern:
+      interval: 1
 ```
 
 {% hint style="warning" %}

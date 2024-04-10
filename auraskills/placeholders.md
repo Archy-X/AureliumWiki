@@ -46,3 +46,6 @@ AuraSkills provides PlaceholderAPI placeholders that work out of the box, withou
 * `%auraskills_multiplier_percent%` - Gets a player's permission XP multiplier as a percent more value rounded to an integer (40 = 40% more XP)
 * `%auraskills_multiplier_percent_[skill]%` - Gets a player's permission XP multiplier for a specific skill as a percent more value rounded to an integer (40 = 40% more XP)
 * `%auraskills_actionbar_status%` - Gets whether the idle action bar is enabled for a player. Returns true or false.
+* `%auraskills_[ability]%` - Gets an ability level. Replace `[ability]` with the default English name of an ability in lowercase.
+* `%auraskills_[ability]_value%` - Gets an ability value.
+* `%auraskills_[ability]_value_2%` - Gets the secondary value of an ability if it exists.
