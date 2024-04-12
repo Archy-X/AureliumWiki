@@ -78,7 +78,7 @@ Options for each hook are under the section with the plugin name.
 * `format` - The format list allows you to change the boss bar color and style for each skill:
   * Format: '\[SKILL] \[COLOR] \[STYLE]'
   * Available colors are BLUE, GREEN, PINK, PURPLE, WHITE, RED, and YELLOW
-  * Available styles are SOLID, SEGMENTED\_6, SEGMENTED\_10, SEGMENTED\_12, and SEGMENTED\_20
+  * Available styles are SOLID, NOTCHED\_6, NOTCHED\_10, NOTCHED\_12, and NOTCHED\_20
 
 `base_mana` - The base amount of mana players should have at 0 Wisdom.
 
