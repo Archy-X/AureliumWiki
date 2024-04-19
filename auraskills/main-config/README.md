@@ -4,7 +4,7 @@ description: Guide to the config.yml file
 
 # Main Config
 
-The `config.yml` is the main plugin configuration file found in the `plugins/AureliumSkills` folder. It is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
+The `config.yml` is the main plugin configuration file found in the `plugins/AuraSkills` folder. It is used for general or miscellaneous config options related to storage/database, external plugin hooks, languages, action bar, boss bar, worlds/regions, modifiers, requirements, and more.
 
 Options for each [skill](../skills/) and stat were formerly here, but have been moved to their own `skills.yml` and `stats.yml` files.
 
