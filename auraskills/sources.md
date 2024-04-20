@@ -110,7 +110,7 @@ The damage source (`type: damage`) gives XP when the player takes damage. In the
 
 * `cause` - The cause of the damage that is required for the source. Must be a valid Bukkit [DamageCause](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html) in all lowercase.
 * `causes` - A list of multiple damage causes.
-* `excluded_cause` - A cause that the damage cannot be for the source. If no `cause`/`causes` is specified, any cause other than the `excluded_cause` will work.
+* `excluded_cause` - A cause that is excluded for the source. If no `cause`/`causes` is specified, any cause other than the `excluded_cause` will work.
 * `excluded_causes` - A list of multiple excluded damage causes.
 * `damager` - A specific entity type that the player must be damaged from. Can be either `mob`, `player`, or any Bukkit [EntityType](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html) in all lowercase. Specifying a damager automatically excludes the source from non-entity damage, like fall damage.
 * `must_survive` - Whether the player must survive the damage taken in order to gain XP. Defaults to true.
@@ -137,6 +137,10 @@ The entity source (`type: entity`) gives XP for a player killing or damaging an 
 * `damager` - A damager to match when giving XP, which can either be `player`, `projectile`, or `thrown_potion`.
 * `damagers` - A list of multiple valid damagers.
 * `scale_xp_with_health` - If the `trigger` is damage, the damage XP multiplier will be scaled by the damaged mob's max health. The total XP gained from killing a mob will be consistent between death and damage triggers. Defaults to true.
+* `cause` - The cause of the damage that is required for the source. Must be a valid Bukkit [DamageCause](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html) in all lowercase.
+* `causes` - A list of multiple damage causes.
+* `excluded_cause` - A cause that is excluded for the source. If no `cause`/`causes` is specified, any cause other than the `excluded_cause` will work.
+* `excluded_causes` - A list of multiple excluded damage causes.
 
 ### Fishing
 

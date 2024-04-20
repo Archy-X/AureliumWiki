@@ -10,7 +10,7 @@ Options for each [skill](../skills/) and stat were formerly here, but have been 
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
-Last Updated Version: `2.0.6`
+Last Updated Version: `2.0.7`
 
 ## Options
 
@@ -228,6 +228,7 @@ Options for each hook are under the section with the plugin name.
 `loot:`
 
 * `update_loot_tables` - Whether new loot items introduced in default configs should be automatically added when updating the plugin.
+* `directly_to_inventory` - If true, all bonus item drops from luck traits and loot will always add directly to the player's inventory instead of being dropped in the world. This option does not affect vanilla item drops.
 
 `check_for_updates` - Whether the plugin should check for new updates on startup and when a player with the `aureliumskills.checkupdates` permission joins
 
