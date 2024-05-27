@@ -80,7 +80,7 @@ Options for each hook are under the section with the plugin name.
   * Available colors are BLUE, GREEN, PINK, PURPLE, WHITE, RED, and YELLOW
   * Available styles are PROGRESS, NOTCHED\_6, NOTCHED\_10, NOTCHED\_12, and NOTCHED\_20
 
-## Jobs
+### Jobs
 
 `jobs:`
 
