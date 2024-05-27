@@ -62,6 +62,9 @@ The following is a list of options that apply to all source types:
 * `display_name` - The readable name used in menus to identify the source. Default sources already have display names defined in the messages file at the path `sources.[type].[name]`. Only define a `display_name` on the source if you want to override the messages value or for newly created sources you don't need to be localized.
 * `menu_item` - A section that defines the item used in the sources menu to represent the source. Placeholders to other keys can be used in `material` for example, to only need to define a single menu\_item in the default section. See [#Menu item](sources.md#menu-item) for details.
 * `unit` - A placeholder that defines the name of the unit for some sources whose XP amount is dynamic, such as Defense XP per damage or Forging XP per anvil cost experience. This is needed for some units to function when giving XP. See the section for the specific type for valid values.
+* `income_per_xp` - Gives money based on the value times the XP gained. Only works if jobs are enabled in the [Main Config](main-config/#jobs). This works the same as the income\_per\_xp in the main config, but overrides it for the specific source. Mutually exclusive with income and income\_expression.
+* `income` - Gives a fixed decimal money amount when the source is gained. Only works if jobs are enabled. Mutually exclusive with income\_per\_xp and income\_expression.
+* `income_expression` - An expression to calculate the income, works the same as the jobs.income.default.expression in the [Main Config](main-config/#jobs). Only works if jobs are enabled. Mutually exclusive with income\_per\_xp and income.
 
 ### Anvil
 

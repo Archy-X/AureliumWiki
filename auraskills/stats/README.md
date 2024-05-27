@@ -62,6 +62,7 @@ The traits section contains configurable options specific to each trait. These o
 * `update_delay` - The number of ticks to delay recalculating and applying the player's health on join or world change. Set this to `1` if you are having compatibility issues with mini-game plugins where health is too high when switching back to the main world.
 * `force_base_health` - If true, the player's base health attribute value will be forced to 20 on every refresh. Only enable if you have compatibility issues with other plugins.
 * `keep_full_on_increase` - If true, increases in a player's max health when the player is already at full HP will automatically set them at the new max HP.
+* `ensure_scaling_disabled` - Disables health scaling if the trait is disabled in order to remove past health scaling. Set to false if you have another plugin that is handling health scaling.
 
 #### Saturation regen and hunger regen
 

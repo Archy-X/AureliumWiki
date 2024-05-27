@@ -10,7 +10,7 @@ Options for each [skill](../skills/) and stat were formerly here, but have been 
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
-Last Updated Version: `2.0.7`
+Last Updated Version: `2.1.0`
 
 ## Options
 
@@ -78,9 +78,28 @@ Options for each hook are under the section with the plugin name.
 * `format` - The format list allows you to change the boss bar color and style for each skill:
   * Format: '\[SKILL] \[COLOR] \[STYLE]'
   * Available colors are BLUE, GREEN, PINK, PURPLE, WHITE, RED, and YELLOW
-  * Available styles are SOLID, NOTCHED\_6, NOTCHED\_10, NOTCHED\_12, and NOTCHED\_20
+  * Available styles are PROGRESS, NOTCHED\_6, NOTCHED\_10, NOTCHED\_12, and NOTCHED\_20
 
-`base_mana` - The base amount of mana players should have at 0 Wisdom.
+## Jobs
+
+`jobs:`
+
+* `enabled` - Whether the jobs system is enabled. Even if selection is disabled, this option must be enabled in order for source income to work. The Vault plugin and an economy plugin must be installed in order for income to be given.
+* `selection:`
+  * `require_selection` - Whether players need to select skills as jobs through the level progression menu in order to earn income while gaining XP. If false, all skills will give income with XP.
+  * &#x20;`default_job_limit` - The default maximum number of jobs a player can have active at once. This limit can be changed per-player using the auraskills.jobs.limit.\[number] permission node.
+  * `disable_unselected_xp` - If true, players will be blocked from gaining XP in all skills besides the skills that are active jobs.
+* `income:`
+  * `use_xp` - Whether the `default.income_per_xp` should be used as the default income value for sources.
+  * `use_expression` - Whether the `default.expression` should be used as the default income value for sources. This overrides `use_xp`.
+  * `default:`
+    * `income_per_xp` - The multiplier for the source XP that determines how much income is given for a source by default. For example, gaining 14 skill XP from a source with an `income_per_xp` of 0.1 will give 1.4 Vault currency to the player.
+    * `expression` - An expression used to calculate the income given for a source by default if `use_expression` is true. The available variables include xp, base\_xp (value without multipliers), level (skill level), power, and skill\_average.
+  * `use_final_xp` - If set to false, the calculation for income\_per\_xp will exclude all XP multipliers.
+
+{% hint style="info" %}
+Jobs income can also be configured per-source in the [sources configuration](../sources.md#global-options).
+{% endhint %}
 
 `enable_roman_numerals` - Whether Roman numerals should be used for skill levels.
 
@@ -238,5 +257,6 @@ Options for each hook are under the section with the plugin name.
 
 * `enabled` - Whether automatic backups should be taken on server shutdown
 * `minimum_interval_hours` - The minimum interval, in hours, between automatic backups. Automatic backups will only be taken at least this amount of hours after the last one.
+* `max_users` - If the server has over this many total users, automatic backups will be skipped.
 
 `save_blank_profiles` - If false, player data of players who have not leveled any skills or gained any XP will not be saved into storage.
