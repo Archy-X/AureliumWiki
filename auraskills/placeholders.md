@@ -49,3 +49,8 @@ AuraSkills provides PlaceholderAPI placeholders that work out of the box, withou
 * `%auraskills_[ability]%` - Gets an ability level. Replace `[ability]` with the default English name of an ability in lowercase.
 * `%auraskills_[ability]_value%` - Gets an ability value.
 * `%auraskills_[ability]_value_2%` - Gets the secondary value of an ability if it exists.
+* `%auraskills_jobs_list%` - Lists active jobs in a comma separated list of default skill names in all lowercase.
+* `%auraskills_jobs_list_formatted%` - Lists active jobs in a comma separated list with the skill display name of the config default\_language.
+* `%auraskills_jobs_count%` - Gets the number of jobs the player currently has active.
+* `%auraskills_jobs_limit%` - Gets the maximum number of jobs the player is allowed to have active at the same time.
+* `%auraskills_jobs_active_[skill]%` - Returns true/false whether the job is active (ex: %auraskills\_jobs\_active\_farming%)
