@@ -149,6 +149,12 @@ Jobs income can also be configured per-source in the [sources configuration](../
 
 `disable_in_creative_mode` - Whether players should not be able to gain xp while in creative mode.
 
+### Data validation
+
+`data_validation:`
+
+* `correct_over_max_level` - If true, the plugin will prevent skill levels being over max level on join.
+
 ### Death options
 
 `on_death:`
