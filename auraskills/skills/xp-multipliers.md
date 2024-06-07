@@ -2,7 +2,7 @@
 description: Guide to XP multipliers
 ---
 
-# Multipliers
+# XP Multipliers
 
 **Multipliers** are a way of increasing the amount of skill XP a player receives without changing the sources config.
 
@@ -12,7 +12,7 @@ Multipliers are permission based, meaning you can add them to individual players
 
 To add a multiplier, use your permissions plugin to add a permission in the following format:
 
-> **aureliumskills.multiplier.\[percent]**
+> **auraskills.multiplier.\[percent]**
 
 Replace \[percent] with the **percent more XP** you want the multiplier to give. For example, the permission `auraskills.multiplier.100` will give 100% more or 2x XP. The percent supports decimals using `.` (e.g. `auraskills.multiplier.10.5`).
 

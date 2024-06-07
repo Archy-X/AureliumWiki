@@ -76,7 +76,7 @@ Every reward must have a `type` value of the reward type it is. Each type of rew
 
 ### Stat rewards (`stat`)
 
-Stat rewards level up an Aurelium Skills stat, which includes health, regeneration, strength, luck, wisdom, and toughness. Menu and level-up chat messages are automatically handled.
+Stat rewards level up an AuraSkills stat, which includes health, regeneration, strength, luck, wisdom, and toughness. Menu and level-up chat messages are automatically handled.
 
 Keys:
 

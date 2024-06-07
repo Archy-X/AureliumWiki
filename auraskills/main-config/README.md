@@ -255,7 +255,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `update_loot_tables` - Whether new loot items introduced in default configs should be automatically added when updating the plugin.
 * `directly_to_inventory` - If true, all bonus item drops from luck traits and loot will always add directly to the player's inventory instead of being dropped in the world. This option does not affect vanilla item drops.
 
-`check_for_updates` - Whether the plugin should check for new updates on startup and when a player with the `aureliumskills.checkupdates` permission joins
+`check_for_updates` - Whether the plugin should check for new updates on startup and when a player with the `auraskills.checkupdates` permission joins
 
 ### Automatic Backups
 
