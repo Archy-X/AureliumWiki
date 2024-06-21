@@ -64,6 +64,8 @@ Options for each hook are under the section with the plugin name.
 * `round_xp` - If enabled, current xp will be rounded to an integer.
 * `placeholder_api` - Whether PlaceholderAPI placeholders should be replaced in the action bar, given that you have PlaceholderAPI.
 * `use_suffix` - Whether to format the current player's XP with number suffixes (k, m, etc). Only applies if `xp` is set to true.
+* `format_last` - If true, parsing of MiniMessage will happen after placeholders (like hp and mana) are replaced on each send. This makes MiniMessage gradients work at the cost of performance.
+* `update_async` - If true, the idle action bar will be updated and sent asynchronously. This is an experimental option.
 
 ### Boss Bar
 
@@ -95,6 +97,10 @@ Options for each hook are under the section with the plugin name.
   * `default:`
     * `income_per_xp` - The multiplier for the source XP that determines how much income is given for a source by default. For example, gaining 14 skill XP from a source with an `income_per_xp` of 0.1 will give 1.4 Vault currency to the player.
     * `expression` - An expression used to calculate the income given for a source by default if `use_expression` is true. The available variables include xp, base\_xp (value without multipliers), level (skill level), power, and skill\_average.
+  * `batching:`
+    * `enabled` - If true, accumulated income will be given in an interval instead of immediately. This can reduce lag from a large amount of calls to Vault economy for large servers. The effective rate of income gain from sources does not change.
+    * `interval_ms` - The minimum delay between income gains when batching is enabled is defined by the interval\_ms parameter. For example, with an interval\_ms of 2000, each time XP is gained, the system checks the timestamp of the last batched income gain. If more than 2 seconds have passed since the last gain, the income is given immediately. If less than 2 seconds have passed, the income is added to the next batch and will be distributed when XP is gained 2 seconds after the last batch time.
+    * `display_individual` - If true, the boss bar will display the original individual income instead of the batched income. This means if this is false and batching is enabled, some boss bars will not display any income gain, and the boss bar for a batch execution will display the accumulated amount.
   * `use_final_xp` - If set to false, the calculation for income\_per\_xp will exclude all XP multipliers.
 
 {% hint style="info" %}
@@ -201,7 +207,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `item:`
   * `check_period` - How often, in ticks, the item held in a player's hand should be checked for stat item modifiers (increase if you have lag)
   * `enable_off_hand` - Whether stat modifiers should work in the off hand
-* `auto_convert_from_legacy` - Whether the old modifier nbt format should be converted to the new one. Set to false if you are having performance issues and all your items have been converted.
+* `auto_convert_from_legacy` - Whether the old modifier nbt format should be converted to the new one. Set to true if you have items from Beta with modifiers that no longer work.
 
 ### Requirement
 
