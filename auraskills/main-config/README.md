@@ -28,6 +28,7 @@ Last Updated Version: `2.1.0`
 * `load_delay` - Number of ticks to delay loading data after a player joins, useful for syncing multiple servers to a single database.
 * `always_load_on_join` - If true, player data will always be loaded from the database when a player joins, regardless if it is already in memory.
 * `ssl` - Whether to use SSL.
+* `maximum_pool_size`, `minimum_idle`, `connection_timeout`, `max_lifetime`, `keepalive_time` - Options used to configure the Hikari connection pool. These should not be changed unless you have issues with connection stability and know what you are doing.
 
 ### Languages
 
@@ -197,6 +198,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 `mana:`
 
 * `enabled` - If false, mana abilities will not cost mana to use and mana displays will be hidden from the action bar and menus.
+* `cooldown_timer_period` - The number of ticks between counting down mana ability cooldowns. Increasing can help reduce lag caused by TimerCooldown for mana abilities. The overall cooldown time remains the same. Requires a restart to take effect.
 
 ### Modifier
 
@@ -223,6 +225,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `armor:`
   * `prevent_armor_equip` - Whether armor should be unable to be equipped when a player does not meet a requirement
   * `global` - Define armor requirements that should apply to every item of that type. Format: - '\[material] \[skill\_1]:\[level\_1] \[skill\_2]:\[level\_2] ...'
+* `override_global` - If true, global requirements will be ignored if item-specific requirements are defined.
 
 ### Critical
 
