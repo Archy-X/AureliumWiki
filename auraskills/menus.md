@@ -27,7 +27,7 @@ The following is an overview of keys and sections that are at left-most indent o
 * `fill` - A section used to define the menu background item to fill empty slots
 * `items` - The main items section used for singular items
 * `templates` - The section used to define items with custom contexts and multiple instances
-* `components` - Lore snippets used inside some components
+* `components` - Lore snippets used inside some templates/items
 * `formats` - Key-value pairs of formats used in some items
 * `options` - A section found in some menu files that contains custom options and settings
 
