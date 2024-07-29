@@ -28,3 +28,4 @@
 
 * [2.0](release-notes/2.0.md)
 * [2.1](release-notes/2.1.md)
+* [2.2](release-notes/2.2.md)
