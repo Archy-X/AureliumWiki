@@ -82,6 +82,7 @@ Options for each hook are under the section with the plugin name.
   * Format: '\[SKILL] \[COLOR] \[STYLE]'
   * Available colors are BLUE, GREEN, PINK, PURPLE, WHITE, RED, and YELLOW
   * Available styles are PROGRESS, NOTCHED\_6, NOTCHED\_10, NOTCHED\_12, and NOTCHED\_20
+* `animate_progress` - Toggles boss bar animation (the delay when updating progress).
 
 ### Jobs
 
@@ -109,6 +110,19 @@ Jobs income can also be configured per-source in the [sources configuration](../
 {% endhint %}
 
 `enable_roman_numerals` - Whether Roman numerals should be used for skill levels.
+
+### Anti-AFK
+
+`anti_afk:`
+
+* `enabled` - Whether the anti-AFK system is enabled. If false, all aspects of the system are disabled.
+* `logging_enabled` - Whether logging for failing anti-AFK checks is enabled. Logs will be sent to any online player with the auraskills.antiafk.notify permission (op by default).
+* `log_threshold` - An expression determining the count of identical conditions required for logging an event. The min\_count variable can be used in this expression to reference the min\_count in the checks section for a check type.
+* `checks:`
+  * `[check_name]:`
+    * `enabled` - Whether this individual check type is enabled.
+    * `min_count` - The minimum number of failed conditions in a row to start blocking XP gain. The counter increments for every identical condition (position, yaw, pitch, or identity) and resets when a differing condition is detected.
+    * `max_distance` - The maximum distance moved to still be counted as a check failure for position/coordinates based checks.
 
 ### Damage Holograms
 

@@ -48,6 +48,8 @@ Universal Keys (apply to any loot type):
 
 ### Item loot
 
+(`type: item`)
+
 Item loot keys:
 
 * `material` - The material of the item, must be valid bukkit material name (not case sensitive). Use material:id to specify legacy data if on 1.12
@@ -87,11 +89,11 @@ Here is a more complex example with display name, lore, and enchantments:
   material: diamond_sword
   weight: 5
   amount: 1
-  display_name: '&cFire Sword'
+  display_name: '<red>Fire Sword'
   lore:
-    - '&7Powerful weapon'
+    - '<gray>Powerful weapon'
     - ' '
-    - '&9RARE'
+    - '<blue>RARE'
   enchantments:
     - sharpness 5
     - fire_aspect 2
@@ -124,8 +126,7 @@ An item with hidden enchants using item flags and custom model data using the nb
   material: paper
   weight: 10
   amount: 1
-  nbt:
-    CustomModelData: 14
+  custom_model_data: 14
   enchantments:
     - knockback 2
   flags:
@@ -133,6 +134,8 @@ An item with hidden enchants using item flags and custom model data using the nb
 ```
 
 ### Command loot
+
+(`type: command`)
 
 Command loot is used to execute any command when the player gets the loot, either through console or by the player.
 
@@ -149,6 +152,25 @@ Example:
   executor: console
   command: say hi
 ```
+
+### Entity loot
+
+(`type: entity`)
+
+Entity loot spawns an entity when the player gets the loot. Currently only Fishing supports catching entity loot.
+
+Entity loot keys:
+
+* `entity` - Defines the type of entity caught.
+  * Vanilla entities/mobs are defined by name (e.g. `entity: zombie`)
+  * MythicMobs can be used with the `mythicmobs:` prefix (e.g. `entity: mythicmobs:SkeletonKing`)
+* `health` - Overrides the entity max health attribute.
+* `damage` - Overrides the entity attack damage attribute.
+* `level` - Defines the AuraMobs or MythicMobs level.
+* `velocity:`
+  * `horizontal` - Overrides the default horizontal velocity of the entity when spawned.
+  * `vertical` - Overrides the default vertical velocity of the entity when spawned.
+* `hand`, `off_hand`, `feet`, `legs`, `chest`, `head` - Defines equipment on the spawned entity. The value is a mapping in the same item format as regular item loot (Using keys `material`, `enchantments`, etc.)
 
 ## Loot selection
 
