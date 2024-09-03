@@ -42,9 +42,14 @@ Last Updated Version: `2.1.0`
 
 `hooks:`
 
-Options for each hook are under the section with the plugin name.
-
 * `enabled` - Whether the hook to the given plugin should be registered. Hooks will only attempt to be loaded if the given plugin is detected and enabled, so hooks can be set to `true` without having the plugin on the server. Some hooks, like HolographicDisplays and DecentHolograms perform the same function, so one must be disabled before the other can be enabled.
+
+Specific options for each hook are under the section with the plugin name below:
+
+#### LuckPerms
+
+* `LuckPerms:`
+  * `use_permission_cache` - Whether to enable the system that caches LuckPerms multiplier permissions for optimizing multiplier calculations. If you change multiplier permissions using certain features that don't trigger LuckPerms events, such as world contexts, this feature may have to be set to false.
 
 #### WorldGuard
 
@@ -57,7 +62,7 @@ Options for each hook are under the section with the plugin name.
 `action_bar:`
 
 * `enabled` - Whether the action bar should be enabled/disabled. (Must be set to `true` to have any action bars; setting to `false` disables all action bar types).
-* `idle` - Controls the idle action bar (not gaining xp). **Enable this if you want the action bar to always display.**
+* `idle` - Controls the idle action bar (not gaining xp). **Set this to false if you don't want health and mana at the bottom of the screen.**
 * `ability` - Controls the action bar for ability messages (raise/lower, activate, etc.). If set the false, the ability messages will be sent through chat instead.
 * `xp` - Controls the action bar for gaining xp (not maxed)
 * `maxed` - Controls the action bar when xp is gained in a maxed skill.
