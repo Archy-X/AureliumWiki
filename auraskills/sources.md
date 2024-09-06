@@ -118,8 +118,12 @@ The damage source (`type: damage`) gives XP when the player takes damage. In the
 * `excluded_cause` - A cause that is excluded for the source. If no `cause`/`causes` is specified, any cause other than the `excluded_cause` will work.
 * `excluded_causes` - A list of multiple excluded damage causes.
 * `damager` - A specific entity type that the player must be damaged from. Can be either `mob`, `player`, or any Bukkit [EntityType](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html) in all lowercase. Specifying a damager automatically excludes the source from non-entity damage, like fall damage.
+* `damagers` - A list of multiple valid entity types.
+* `excluded_damager` - A specific entity type that is excluded from giving XP for the source.
+* `excluded_damagers` - A list of entities types excluded from giving XP.
 * `must_survive` - Whether the player must survive the damage taken in order to gain XP. Defaults to true.
 * `use_original_damage` - Whether the XP given should be multiplied by the original damage dealt without any damage reduction modifiers (armor, stats, abilties, etc). Defaults to true.
+* `cooldown_ms` - A delay before XP can be gained again in milliseconds (200 by default).
 
 ### Enchanting
 

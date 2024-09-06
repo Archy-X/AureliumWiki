@@ -98,6 +98,7 @@ Specific options for each hook are under the section with the plugin name below:
   * `require_selection` - Whether players need to select skills as jobs through the level progression menu in order to earn income while gaining XP. If false, all skills will give income with XP.
   * &#x20;`default_job_limit` - The default maximum number of jobs a player can have active at once. This limit can be changed per-player using the auraskills.jobs.limit.\[number] permission node.
   * `disable_unselected_xp` - If true, players will be blocked from gaining XP in all skills besides the skills that are active jobs.
+  * `cooldown_sec` - The number of seconds players have to wait to select a new job after selecting one.
 * `income:`
   * `use_xp` - Whether the `default.income_per_xp` should be used as the default income value for sources.
   * `use_expression` - Whether the `default.expression` should be used as the default income value for sources. This overrides `use_xp`.
