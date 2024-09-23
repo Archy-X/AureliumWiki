@@ -102,13 +102,11 @@ Detect and add block to placed blocks from Slimefuns Block placer to prevent XP 
 
 ## Known plugins that hook into AuraSkills
 
-### MMOItems
+### [MMOItems](https://www.spigotmc.org/resources/mmoitems.39267/)
 
 You can set your `preferred_rpg_provder` in MMOItems to `AURA_SKILLS`. This way you can create items that are using mana from this plugin. You can also make your items give AuraSkills stats and mana to players, or restrict their usage by skill levels. For a more detailed guide on how to set this up please refer to the official [MMOItems wiki](https://gitlab.com/phoenix-dvpmt/mmoitems/-/wikis/Supported%20Plugins#aureliumskills).
 
-[Check out the plugin here](https://www.spigotmc.org/resources/mmoitems.39267/).
-
-### CustomFishing
+### [CustomFishing](https://polymart.org/resource/customfishing.2723)
 
 You can give skill xp when fishing up something in CustomFishing and you can buff fishing rods and minigames based on skill levels or by using other AuraSkills placeholders.
 
@@ -129,9 +127,7 @@ tuna_fish_golden_star:
 
 For additional information check out CustomFishings wiki and their Discord support.&#x20;
 
-[You can find the plugin here](https://polymart.org/resource/customfishing.2723).
-
-### Eco plugins
+### [Eco plugins](https://polymart.org/user/auxilor.1107)
 
 Eco plugins are using the Libreforge yaml scripting language to create effects, conditions and other thing in every Eco plugin like EcoItems, EcoPets, Talismans etc.
 
@@ -143,58 +139,42 @@ Eco provides some useful effects and conditions to integrate with AuraSkills:
 * [has\_mana](https://plugins.auxilor.io/effects/all-conditions/has\_mana)
 * [has\_skill\_level](https://plugins.auxilor.io/effects/all-conditions/has\_skill\_level)
 
-[You can find eco plugins here](https://polymart.org/user/auxilor.1107).
+### [BeeMinions](https://polymart.org/resource/beeminions.6048)
 
-### BeeMinions
+These minions can give skill XP after they produced some products. There isn't really any documentation about it at the time of writing but you should look around filters.
 
-These minions can give skill XP after they produced some products. There isn't really any documentation about it at the time of writing but you should look around filters.&#x20;
-
-[You can find this plugin here](https://polymart.org/resource/beeminions.6048).
-
-### Aurora plugins
+### [Aurora plugins](https://modrinth.com/user/erik\_sz)
 
 Aurora plugins, like AuroraLevels, AuroraCollections, and AuroraQuests are hooking into AuraSkills to provide auto-correcting stat rewards. This is useful if you want to spice up your RPG experience while you don't have to worry about nerfing/buffing the stat rewards later on.&#x20;
 
-[Check these out here](https://modrinth.com/user/erik\_sz).
-
-### TreeAssist
+### [TreeAssist](https://www.spigotmc.org/resources/treeassist.67436/)
 
 Can give AuraSkills foraging skill XP when chopping down trees.
 
-[Check it out here](https://www.spigotmc.org/resources/treeassist.67436/).
-
-### ExecutableItems
+### [ExecutableItems](https://www.spigotmc.org/resources/83070/)
 
 Can require mana to let players use the items. Use [requiredMana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) for this to work.
-
-[You can check out the plugin here](https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8F-executableitems-%E2%AD%90-custom-tools-weapons-armor-set-potions-mmo-items-vouchers-cosmetics-%E2%AD%90.83070/).
 
 ### [UltraBoomerangs](https://www.spigotmc.org/resources/ultraboomerangs-create-custom-unqiue-boomerangs-mcmmo-auraskills-support.113150/)
 
 Earn AuraSkills XP when killing mobs with a boomerang.
 
-### [Random Enchanted Rewards for AuraSkills](https://modrinth.com/plugin/random-enchanted-rewards-for-auraskills)
+### [Random Enchanted Rewards](https://modrinth.com/plugin/random-enchanted-rewards-for-auraskills)
 
 Rewards players with randomly enchanted items as they level up their skills.
 
-## Official addons
+## Official add-ons
 
-### AuraMobs
+### [AuraMobs](https://www.spigotmc.org/resources/auramobs-a-mob-levels-add-on-for-auraskills.94168/)
 
 Level your mobs based on player sum/average skill levels to make them harder to defeat. Increase their health and attack damage to complete the true RPG experience AuraSkills can provide. Fully integrated with AuraSkills XP gain and mob drop tables.&#x20;
 
-[Get it for free from here](https://www.spigotmc.org/resources/auramobs-a-mob-levels-add-on-for-auraskills.94168/).
+## Unofficial add-ons
 
-## Unofficial addons
-
-### Level restrict
+### [Level restrict](https://github.com/Fly1337/AuraSkillsLevelRestrict/releases)
 
 By using this addon, you can prevent block breaking until the player reaches a specific skill level. This behavior is highly configurable.&#x20;
 
-[Check it out here](https://github.com/Fly1337/AuraSkillsLevelRestrict/releases).
+### [CannonsRPG](https://hangar.papermc.io/Intybyte/CannonsRPG)
 
-### CannonsRPG
-
-A Cannons and AuraSkills addon that allows players to level up and unlock skills related to firing cannons.&#x20;
-
-[Check it out here](https://hangar.papermc.io/Intybyte/CannonsRPG).
+A Cannons and AuraSkills addon that allows players to level up and unlock skills related to firing cannons.
