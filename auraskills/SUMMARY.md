@@ -19,6 +19,7 @@
 * [Commands](commands.md)
 * [Permissions](permissions.md)
 * [Placeholders](placeholders.md)
+* [Compatible Plugins](compatible-plugins.md)
 * [Migration](migration.md)
 * [API](api.md)
 * [FAQ](faq.md)
