@@ -159,10 +159,6 @@ Can require mana to let players use the items. Use [requiredMana](https://docs.s
 
 Earn AuraSkills XP when killing mobs with a boomerang.
 
-### [Random Enchanted Rewards](https://modrinth.com/plugin/random-enchanted-rewards-for-auraskills)
-
-Rewards players with randomly enchanted items as they level up their skills.
-
 ## Official add-ons
 
 ### [AuraMobs](https://www.spigotmc.org/resources/auramobs-a-mob-levels-add-on-for-auraskills.94168/)
@@ -178,3 +174,11 @@ By using this addon, you can prevent block breaking until the player reaches a s
 ### [CannonsRPG](https://hangar.papermc.io/Intybyte/CannonsRPG)
 
 A Cannons and AuraSkills addon that allows players to level up and unlock skills related to firing cannons.
+
+### [Random Enchanted Rewards](https://modrinth.com/plugin/random-enchanted-rewards-for-auraskills)
+
+Rewards players with randomly enchanted items as they level up their skills.
+
+### [SkillTime](https://github.com/Intybyte/SkillTime/releases)
+
+Define time ranges in which some skills will earn more/less XP.
