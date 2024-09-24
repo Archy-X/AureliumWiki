@@ -1,5 +1,5 @@
 ---
-description: Plugins that AuraSkills support or support AuraSkills
+description: Plugins that AuraSkills supports or support AuraSkills
 ---
 
 # Compatible Plugins
@@ -9,8 +9,8 @@ description: Plugins that AuraSkills support or support AuraSkills
 This is a quick overview about the plugins that are compatible with AuraSkills. There are three main categories:
 
 * Plugins that are supported by AuraSkills itself
-* Plugins that are hooking into AuraSkills through its API
-* Addons that are made specifically to work AuraSkills or extend its functionality
+* Plugins that hook into AuraSkills through its API
+* Add-ons that are made specifically to work AuraSkills or extend its functionality
 
 {% hint style="info" %}
 There may be even more plugins that are compatible with AuraSkills. These are just the ones that we know of.
