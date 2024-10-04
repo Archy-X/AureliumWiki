@@ -359,7 +359,7 @@ The following is an example for creating a Trading skill that gives XP when trad
 public class CustomSkills {
 
     public static final CustomSkill TRADING = CustomSkill
-            .builder(NamespacedId.of("pluginname", "trading")
+            .builder(NamespacedId.of("pluginname", "trading"))
             .displayName("Trading")
             .description("Trade with villagers to gain Trading XP")
             .item(ItemContext.builder()
