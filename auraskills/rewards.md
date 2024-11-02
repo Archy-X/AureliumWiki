@@ -50,7 +50,7 @@ Example pattern reward for a command that executes every level up:
 patterns:
   - type: command
     executor: console
-    commmand: 'say this executes every level up'
+    command: 'say this executes every level up'
     pattern:
       start: 2
       interval: 1
