@@ -23,6 +23,7 @@
 * [Migration](migration.md)
 * [API](api.md)
 * [FAQ](faq.md)
+* [Server Requirements](server-requirements.md)
 * [Incompatibilities](incompatibilities.md)
 
 ## Release Notes

@@ -13,9 +13,9 @@ The following server software will not receive support. Although the plugin may 
 
 ## Incompatible Server Options
 
-* **Offline Mode** - We do not support piracy in any way, and player data saving may not work.
+* **Offline Mode** - We do not provide support for offline mode on Discord due to terms of service and the EULA. Certain features around player data saving may not work. Use at your own risk.
 
 ## Incompatible Plugins
 
 * **LoreAttributesRecoded** - Will reset health when doing certain actions. Can be fixed by disabling the health in that plugin.
-* **CustomEnchants** - Will reset health when doing certain actions.
+* **CustomEnchants** (not all enchant plugins, just the one specifically named this) - Will reset health when doing certain actions.
