@@ -67,6 +67,8 @@ The `formats` section are key-value pairs used as formatting for lore in other i
 #### skills:
 
 * `bar_length` - The total number of characters displayed in the XP bar. Also applies to XP bars in the level progression menu.
+* `percent_format` - The decimal format for the `{percent}` placeholder in the progress component. Uses the Java DecimalFormat pattern.
+* `current_xp_format` - The decimal format for the `{current_xp}` placeholder in the progress component. Uses the Java DecimalFormat pattern.
 
 **level\_progression:**
 
@@ -83,6 +85,7 @@ The `formats` section are key-value pairs used as formatting for lore in other i
 * `items_per_page` - The number of source items to show per menu page.
 * `use_track` - Whether to use the `track` list to determine source item positions instead of `source_start` and `source_end`.
 * `track` - A list of slot numbers ranged 0-54 for positioning source items.
+* `xp_format` - The decimal format for the `{source_xp}` placeholders in the source template and multiplied\_xp component. Uses the Java DecimalFormat pattern.
 
 ## Colors and formatting
 

@@ -92,9 +92,9 @@ This skill will damage the current target when the player right clicks with the 
 
 We can't provide more support than this. If you are not sure about how Mythic triggers/targeters or conditions work, please learn about them in their [official wiki](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/home) or ask for support on their Discord server.
 
-### Oraxen
+### Nexo
 
-You can augment Oraxen custom blocks with the Luck stat/trait as well as regular blocks. You can also specify how much XP should Oraxen blocks give (`oraxen:block_id`). Oraxen items can also be used directly for XP source menu items.
+You can augment Nexo custom blocks with the Luck stat/trait as well as regular blocks. You can also specify how much XP should Nexo blocks give (`nexo:block_id`). Nexo items can also be used directly for XP source menu items.
 
 ### Slimefun
 
@@ -133,17 +133,17 @@ Eco plugins are using the Libreforge yaml scripting language to create effects, 
 
 Eco provides some useful effects and conditions to integrate with AuraSkills:
 
-* [add\_stat](https://plugins.auxilor.io/effects/all-effects/add\_stat#permanent-effect)
-* [skill\_xp\_multiplier](https://plugins.auxilor.io/effects/all-effects/skill\_xp\_multiplier#permanent-effect)
-* [mana\_cost](https://plugins.auxilor.io/effects/configuring-an-effect#mana\_cost)
-* [has\_mana](https://plugins.auxilor.io/effects/all-conditions/has\_mana)
-* [has\_skill\_level](https://plugins.auxilor.io/effects/all-conditions/has\_skill\_level)
+* [add\_stat](https://plugins.auxilor.io/effects/all-effects/add_stat#permanent-effect)
+* [skill\_xp\_multiplier](https://plugins.auxilor.io/effects/all-effects/skill_xp_multiplier#permanent-effect)
+* [mana\_cost](https://plugins.auxilor.io/effects/configuring-an-effect#mana_cost)
+* [has\_mana](https://plugins.auxilor.io/effects/all-conditions/has_mana)
+* [has\_skill\_level](https://plugins.auxilor.io/effects/all-conditions/has_skill_level)
 
 ### [BeeMinions](https://polymart.org/resource/beeminions.6048)
 
 These minions can give skill XP after they produced some products. There isn't really any documentation about it at the time of writing but you should look around filters.
 
-### [Aurora plugins](https://modrinth.com/user/erik\_sz)
+### [Aurora plugins](https://modrinth.com/user/erik_sz)
 
 Aurora plugins, like AuroraLevels, AuroraCollections, and AuroraQuests are hooking into AuraSkills to provide auto-correcting stat rewards. This is useful if you want to spice up your RPG experience while you don't have to worry about nerfing/buffing the stat rewards later on.&#x20;
 

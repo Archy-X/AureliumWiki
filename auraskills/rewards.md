@@ -82,14 +82,14 @@ Keys:
 
 * `stat` - The name of the stat the reward should level, use the default English names like `strength` (Required)
 * `value` - The amount of the stat to level, defaults to 1 (Optional)
+* `format` - Configures the decimal format for the value displayed in menus and level up messages. Uses the Java DecimalFormat pattern.
 
 Example:
 
-```yaml
-- type: stat
-  stat: strength
+<pre class="language-yaml"><code class="lang-yaml"><strong>- type: stat
+</strong>  stat: strength
   value: 1
-```
+</code></pre>
 
 {% hint style="info" %}
 **Want to remove the default stat rewards?** You can do so by making the patterns section empty using `patterns: []`. However, you may need to adjust menu message newlines in the messages file to remove extra spaces when there are no stat rewards.

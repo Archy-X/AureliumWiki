@@ -276,6 +276,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `placeholder_api` - Whether PlaceholderAPI placeholders should be used in menus.
 * `stats:`
   * `show_trait_values_directly` - If true, stats that have a single trait with a `modifier` of exactly 1 will show the value of the trait instead in menus. This allows trait base values, such as the 20 HP every player has by default, to be included in the shown level.
+* `removal_protection` - Enables additional protections against removing items from menus.
 
 ### Loot
 
