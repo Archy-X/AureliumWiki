@@ -10,7 +10,7 @@ Options for each [skill](../skills/) and stat were formerly here, but have been 
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
-Last Updated Version: `2.2.3`
+Last Updated Version: `2.3.5`
 
 ## Options
 
@@ -188,6 +188,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 
 * `reset_skills` - Whether to reset a player's skill levels when they die.
 * `reset_xp` - Whether to reset a player's XP in their current skill levels when they die. Skill levels are not changed.
+* `reset_xp_ratio` - The ratio of the player's current XP that should remain after death if `reset_xp` is enabled. A value of `0.4` will removed 60% of the player's current XP in each skill, so 40% of their XP will remain.
 
 ### Auto-save
 
@@ -219,6 +220,8 @@ Jobs income can also be configured per-source in the [sources configuration](../
 
 * `enabled` - If false, mana abilities will not cost mana to use and mana displays will be hidden from the action bar and menus.
 * `cooldown_timer_period` - The number of ticks between counting down mana ability cooldowns. Increasing can help reduce lag caused by TimerCooldown for mana abilities. The overall cooldown time remains the same. Requires a restart to take effect.
+* `stat_info:`
+  * `enabled` - Whether the stat info menu that shows modifiers is enabled, which is accessed by clicking a stat button in the /stats menu.
 
 ### Modifier
 

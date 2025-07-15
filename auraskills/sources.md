@@ -309,7 +309,7 @@ For example, the `farming_luck_applicable` tag is the list of sources that will 
 
 By default you might not see the names of sources in the list, since many just the symbol `*` on the list. This adds all the sources in the skill to the tag.
 
-If you want to exclude a source from the list that already has a wildcard without addding every single other source, you can prefix the source name with `!` to exclude it.
+If you want to exclude a source from the list that already has a wildcard without addding every single other source, you can prefix the source name with `!` to exclude it. For example, the exclude only sugar cane from Farming Luck:
 
 ```yaml
 tags:
@@ -318,7 +318,15 @@ tags:
     - '!sugar_cane'
 ```
 
-In the example above, all farming sources except sugar cane will apply to Farming Luck.
+Wildcards can also be combined with text at the beginning or end of the string:
+
+```yaml
+tags:
+  farming_luck_applicable:
+    - 'stripped_*'
+```
+
+This example shows making Farming Luck only applicable to wheat, potato, carrot, and beetroot. Note that the names used in the list are the source names (section names under `sources`), not the value of `block` within the source.
 
 ```yaml
 tags:
@@ -328,5 +336,3 @@ tags:
     - carrot
     - beetroot
 ```
-
-This example shows making Farming Luck only applicable to wheat, potato, carrot, and beetroot. Note that the names used in the list are the source names (section names under `sources`), not the value of `block` within the source.

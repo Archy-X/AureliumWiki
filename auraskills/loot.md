@@ -57,7 +57,10 @@ Item loot keys:
 * `key` - References an item key registered using /skills item register. If this is specified, material and all keys below do not apply
 * `display_name` - The display name of the item, supports & for color codes unless escaped with \\& (optional)
 * `lore` - The lore of the item, must be a list of each line, supports & for color codes unless escaped with \\& (optional)
-* `enchantments` - A list of enchantments, one enchantment per line. Use a space between the enchantment name and the level, such as 'sharpness 5' (optional)
+* `enchantments` - A list of enchantments. See the [section below](loot.md#enchantments) that explains the format.
+* `damage` - The ratio of total durability removed from the item. An item with `damage: 0.4` will have 40% less durability than max, or be at 60% of total durability. If damage is a mapping, durability will be set randomly based on a range. The following keys set the bounds:
+  * `min` - The lower bound for the durability ratio removed.
+  * `max` - The upper bound for the durability ratio removed.
 * `potion_data` - A section containing potion data, see below for keys (optional):
   * `type` - The type of potion, must be a bukkit PotionType
   * `extended` - Whether the potion has an extended duration
@@ -70,6 +73,33 @@ Item loot keys:
 * `nbt` - Section for any custom NBT data (optional)
 * `flags` - List of item flags to add to the item (optional)
 * `ignore_legacy` - If true, the plugin will skip loading the item if the server version is below 1.13 to prevent material parsing errors. The only reason you should use this if you are planning on using the same config for legacy and modern versions and an item you have does not exist in 1.12. The plugin is able to recognize modern material names on legacy versions without any issues. (optional)
+
+#### Enchantments
+
+The `enchantments` key on an item is a list that has either string or mapping elements.
+
+As a string, an enchantment is formatted as `<enchantment_name> <level>` or `<enchantment_name> <min_level>-<max_level>`. For example:
+
+```yaml
+enchantments:
+- unbreaking 3 # Item always has Unbreaking 3
+- sharpness 1-3 # Item has Sharpness with a random level from 1 to 3
+```
+
+An enchantment as a mapping has the following keys:
+
+* `name` - The name of the enchantment
+* `level` - The level of the enchantment, supports ranges
+* `chance` - The chance that is enchantment is added to the item, from 0 to 1 (defaults to 1).
+
+For example:
+
+```yaml
+enchantments:
+- name: unbreaking
+  level: 2
+  chance: 0.5 # 50% chance to have Unbreaking 2, otherwise no enchantments
+```
 
 #### Examples
 

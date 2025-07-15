@@ -53,3 +53,7 @@ See the [XP Multipliers page](skills/xp-multipliers.md) for more details.
 ### What server software is supported?
 
 Only Spigot and Paper are officially supported, but many Paper forks like Purpur will likely work. CraftBukkit and modded hybrid servers (Arclight, Mohist, etc) are not supported.
+
+### Why am I not appearing on the leaderboard? / How do I exclude op players from the leaderboard?
+
+The `auraskills.leaderboard.exclude` permission controls whether a player is shown on the leaderboard. This is `false` by default, but if a player has `auraskills.*` then that player will be excluded. Simply set this permission individually to `false` (want the player to show) or `true` (do not want the player to show.
