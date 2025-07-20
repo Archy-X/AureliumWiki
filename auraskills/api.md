@@ -8,7 +8,7 @@ The AuraSkills API allows developers to interact with the plugin, integrate with
 
 The API consists of just the `api` and `api-bukkit` sub-modules. This allows API methods to be stable across versions and prevents the use of unstable internal methods.
 
-Javadocs are available [here](https://docs.aurelium.dev/auraskills-api-bukkit/).
+Javadocs are available [here](https://aurelium.dev/javadocs/auraskills-api-bukkit/).
 
 ## Getting Started
 
