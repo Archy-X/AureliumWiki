@@ -8,10 +8,6 @@ description: Welcome to the AuraSkills wiki!
 
 This wiki contains documentation on how to set up, configure, and use the plugin. Support from the developer is provided on the [Discord](https://discord.gg/Bh2EZfB) server, where users can also give suggestions, report bugs, and get announcements. AuraSkills is open-sourced on [GitHub](https://github.com/Archy-X/AuraSkills).
 
-{% hint style="warning" %}
-This wiki is for AuraSkills 2.0+ only. For the old wiki (AureliumSkills Beta 1.3.x), click [here](https://app.gitbook.com/o/-Mf1Cqap-T455k8cLLbf/s/-Mf1ApP15HhRtnWXpe0T/).
-{% endhint %}
-
 ## Overview
 
 Players level up [skills](skills/) by gaining skill XP through general Minecraft tasks, such as Farming, Mining, Fighting, or Enchanting. Increasing levels for each skill gives the player [stat buffs](stats/), unlocks and levels up [passive](abilities.md) and [mana abilities](mana-abilities.md), and other customizable [rewards](rewards.md). Using `/skills`, players can view all the relevant information about skills and gameplay in fully-configurable inventory GUI [menus](menus.md). Certain Fishing and Excavation abilities drop custom loot, which can be customized and extended to other skills through [loot tables](loot.md). Players can compete with each other through leaderboards and rankings. Custom items can also be created that give [stat modifiers](stats/stat-modifiers.md) when held or worn, [skill requirements](skills/item-requirements.md) to use, and [XP multipliers](skills/xp-multipliers.md#item-and-armor-multipliers). Numerous [commands](commands.md) and [permissions](permissions.md) allow server admins to manage players and control access to features.
