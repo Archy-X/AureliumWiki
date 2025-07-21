@@ -7,6 +7,7 @@
   * [XP Requirements](skills/xp-requirements.md)
   * [XP Multipliers](skills/xp-multipliers.md)
   * [Item Requirements](skills/item-requirements.md)
+  * [Block Requirements](skills/block-requirements.md)
 * [Stats](stats/README.md)
   * [Stat Modifiers](stats/stat-modifiers.md)
 * [Abilities](abilities.md)
