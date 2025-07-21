@@ -4,7 +4,7 @@ description: Guide to item and armor requirements
 
 # Item Requirements
 
-**Requirements** allow you to add skill level requirements in order to use an item. For example, you can create a pickaxe that only works when the player reaches Mining 15. There are two types of requirements: item and armor.&#x20;
+Item requirements allow you to add skill level requirements in order to use an item. For example, you can create a pickaxe that only works when the player reaches Mining 15. There are two types of requirements: item and armor.&#x20;
 
 Item requirements apply when using the item in the player's hand. Armor requirements only apply when equipping/wearing the item.
 
