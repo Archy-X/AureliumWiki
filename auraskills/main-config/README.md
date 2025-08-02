@@ -10,7 +10,7 @@ Options for each [skill](../skills/) and stat were formerly here, but have been 
 
 If an option you see in the config is missing, this page may not have been updated yet or the option may have been removed. You can find any config additions and changes in the full plugin [changelog](https://github.com/Archy-X/AureliumSkills/blob/master/Changelog.txt).
 
-Last Updated Version: `2.3.5`
+Last Updated Version: `2.3.6`
 
 ## Options
 
@@ -57,7 +57,7 @@ Specific options for each hook are under the section with the plugin name below:
   * `blocked_regions` - Players in regions on this list will not be able to gain XP naturally in any skill.
   * `blocked_check_replace_regions` - Regions on this list will disable block sources checking if the block broken has been player placed.
 
-### Action Bar
+### Action bar
 
 `action_bar:`
 
@@ -73,7 +73,7 @@ Specific options for each hook are under the section with the plugin name below:
 * `format_last` - If true, parsing of MiniMessage will happen after placeholders (like hp and mana) are replaced on each send. This makes MiniMessage gradients work at the cost of performance.
 * `update_async` - If true, the idle action bar will be updated and sent asynchronously. This is an experimental option.
 
-### Boss Bar
+### Boss bar
 
 `boss_bar:`
 
@@ -130,7 +130,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
     * `min_count` - The minimum number of failed conditions in a row to start blocking XP gain. The counter increments for every identical condition (position, yaw, pitch, or identity) and resets when a differing condition is detected.
     * `max_distance` - The maximum distance moved to still be counted as a check failure for position/coordinates based checks.
 
-### Damage Holograms
+### Damage holograms
 
 `damage_holograms:`
 
@@ -168,7 +168,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `enabled` - Whether blocks placed by players should not give xp; keep `true` unless you are having plugin compatibility issues.
 * `blocked_worlds` - A list of worlds that should not be checked for block replacement. Checking will be disabled in these worlds regardless of what `enabled` is set to.
 
-### Worlds and Regions
+### Worlds and regions
 
 `blocked_worlds` - Players in worlds on this list will not be able to gain xp naturally in any skill.
 
@@ -290,7 +290,7 @@ Jobs income can also be configured per-source in the [sources configuration](../
 
 `check_for_updates` - Whether the plugin should check for new updates on startup and when a player with the `auraskills.checkupdates` permission joins
 
-### Automatic Backups
+### Automatic backups
 
 `automatic_backups:`
 
@@ -299,3 +299,13 @@ Jobs income can also be configured per-source in the [sources configuration](../
 * `max_users` - If the server has over this many total users, automatic backups will be skipped.
 
 `save_blank_profiles` - If false, player data of players who have not leveled any skills or gained any XP will not be saved into storage.
+
+### Experimental options
+
+Experimental options are not included in the config by default. Each option you want to enable must be manually added in an `experimental` section. These options
+are usually features that are intended to be enabled by default eventually, but may be unstable or require additional testing.
+
+`experimental:`
+
+* `optimize_leaderboard_updating` (boolean) - Whether to enable optimized fetching of user data from the SQL database for leaderboard updates. When enabled, only
+  users updated in the database since the last leaderboard update will be fetched after the initial load.
