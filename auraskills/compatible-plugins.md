@@ -96,7 +96,7 @@ We can't provide more support than this. If you are not sure about how Mythic tr
 
 #### Items
 
-Nexo items can be easily used as loot, source menu items, and menu items.
+Nexo items can be easily used as loot, source menu items, and as any menu item.
 
 Example loot:
 
@@ -111,6 +111,13 @@ Example source menu item:
 ```yaml
 source_name:
   menu_item: nexo:your_item_id
+```
+
+Example menu item:
+
+```yaml
+some_menu_item:
+  key: nexo:your_item_id
 ```
 
 #### Custom blocks
