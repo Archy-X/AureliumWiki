@@ -94,7 +94,44 @@ We can't provide more support than this. If you are not sure about how Mythic tr
 
 ### Nexo
 
-You can augment Nexo custom blocks with the Luck stat/trait as well as regular blocks. You can also specify how much XP should Nexo blocks give (`nexo:block_id`). Nexo items can also be used directly for XP source menu items.
+#### Items
+
+Nexo items can be easily used as loot, source menu items, and as any menu item.
+
+Example loot:
+
+```yaml
+loot:
+- type: item
+  key: nexo:your_item_id
+```
+
+Example source menu item:
+
+```yaml
+source_name:
+  menu_item: nexo:your_item_id
+```
+
+Example menu item:
+
+```yaml
+some_menu_item:
+  key: nexo:your_item_id
+```
+
+#### Custom blocks
+
+Nexo custom blocks can be easily added as block sources to gain XP in skills such as Farming, Mining, etc.:
+
+```yaml
+source_name:
+  block: nexo:your_block_id
+  xp: 5
+```
+
+Nexo blocks will correctly register as placed blocks to prevent XP dupes. Luck traits (Farming Luck, etc.) will work for Nexo blocks added
+as sources.
 
 ### Slimefun
 

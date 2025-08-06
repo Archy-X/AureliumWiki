@@ -95,8 +95,7 @@ The block source (`type: block`) gives XP for breaking or interacting with block
 * `after_states` - A list of block states to check on tick after. XP is given if the block still matches any states in the list.
 * `state_multiplier` - An expression with block state variables that evaluates to a number to multiply the base `xp` given.
 * `support_block` - A direction defined for some blocks that will automatically break if an adjacent block is broken. Valid values are `above`, `below`, `side`, and `none`. This ensures that the block can be unmarked as a player placed block when it is indirectly broken. Defaults to `none`.
-* `trunk` - Whether the block is a tree trunk. Used by Treecapitator for checking valid blocks to break. Defaults to false.
-* `leaf` - Whether the block is a leaf block. Used by Treecapitator for checking valid blocks to break. Defaults to false.
+* `max_blocks` - The maximum number of blocks Treecapitator can break for this trunk type.
 
 ### Brewing
 
@@ -336,3 +335,26 @@ tags:
     - carrot
     - beetroot
 ```
+
+### Excavation tags
+
+* `excavation_luck_applicable` - List of sources that can drop extra items from the Excavation Luck trait
+* `metal_detector_applicable` - List of sources that can drop the `rare` loot table for Excavation
+* `lucky_spades_applicable` - List of sources that can drop the `epic` loot table for Excavation
+* `terraform_applicable` - List of sources that can be broken by the Terraform mana ability
+
+### Farming tags
+
+* `farming_luck_applicable` - List of sources that can drop extra items from the Farming Luck trait
+
+### Foraging tags
+
+* `foraging_luck_applicable` - List of sources that can drop extra items from the Foraging Luck trait
+* `trunks` - List of sources can activate Treecapitator
+* `treecapitator_applicable` - List of sources that can be broken by Treecapitator
+
+### Mining tags
+
+* `mining_luck_applicable` - List of sources that can drop extra items from the Mining Luck trait
+* `speed_mine_applicable` - List of sources that can activate the Speed Mine mana ability
+
